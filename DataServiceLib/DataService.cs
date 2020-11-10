@@ -29,7 +29,7 @@ namespace DataServiceLib
         public BookmarkPerson GetBookMark(int bookmarkid)
         {
 
-            return _Bookmark.FirstOrDefault(x => x.BookMarkid == bookmarkid);
+            return BookmarkPerson.FirstOrDefault(x => x.BookMarkid == bookmarkid);
             
         }
 

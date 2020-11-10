@@ -17,11 +17,11 @@ namespace DataServiceLib
         IList<ActorsKnownForTitles> GetActors();
         ActorsKnownForTitles GetActor();
 
-        bool AddBookmark(int id);
+        bool CreateBookmark(int id);
         bool DeleteBookmark(int id);
 
-        bool AddRating(int id);
-        bool UpdateRatign(UserNameRate userNameRate);
+        bool CreateRating(int id);
+        bool UpdateRating(UserNameRate userNameRate);
         
 
     }
