@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class ActorsProfession
     {
-        [Key]
+       
         public string Nconst { get; set; }
         public string PrimaryProfession { get; set; }
         
