@@ -14,7 +14,7 @@ namespace DataServiceLib
           IList<TitleGenres> GetGenre();
 
         IList<UserNameRate> GetRating();
-        UserNameRate GetRating(int UserId, int NameIndividRating, string Nconst, DateTime DateTime);
+        UserNameRate GetRatings(int UserId, int NameIndividRating, string Nconst, DateTime DateTime);
  
         TitleGenres GetGenres(string Tconst, string Genres);
          IList<BookmarkPerson> GetBookmarkPerson();

@@ -29,7 +29,7 @@ namespace DataServiceLib
             return _Rating;  // returns the object when calling the GetRating function
         }
 
-        public UserNameRate GetRating(int Userid, int nameindividrating, string nconst, DateTime DateTime)
+        public UserNameRate GetRatings(int Userid, int nameindividrating, string nconst, DateTime DateTime)
         {
             return IDataService.UserNameRate.Where(x => x.UserId == Userid &&
                        x.NameIndividRating == nameindividrating && x.Nconst == nconst).FirstOrDefault();
@@ -50,7 +50,7 @@ namespace DataServiceLib
 
         public bool UpdateRating(UserNameRate usernamerate)
         {
-            var dbRating = GetRating(usernamerate.UserId, usernamerate.NameIndividRating, usernamerate.Nconst, usernamerate.DateTime);
+            var dbRating = GetRatings(usernamerate.UserId, usernamerate.NameIndividRating, usernamerate.Nconst, usernamerate.DateTime);
             if (dbRating == null)
             {
                 return false;
