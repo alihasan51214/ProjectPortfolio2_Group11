@@ -14,8 +14,8 @@ namespace ProjectPortfolio2_Group11
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-            var config = new ConfigurationBuilder()
+            CreateHostBuilder(args).Build().Run();
+           /* var config = new ConfigurationBuilder()
                 .AddJsonFile("config.json")
                 .AddEnvironmentVariables()
                 .Build();
@@ -25,7 +25,7 @@ namespace ProjectPortfolio2_Group11
             foreach (var elem in dataService.GetActorsKnownForTitles())
             {
                 Console.Write(elem);    
-            }
+            }*/
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

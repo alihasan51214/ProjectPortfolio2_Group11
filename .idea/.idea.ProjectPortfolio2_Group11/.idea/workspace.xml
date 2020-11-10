@@ -4,11 +4,27 @@
     <projectFile>ProjectPortfolio2_Group11/ProjectPortfolio2_Group11.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="" />
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DataServiceLib/IDataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Controller/RatingController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebService/Controller/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/WebService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/WebService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/config.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -36,12 +52,22 @@
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/WordSearch.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/Writer.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" />
+        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/Controller.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/UsersController.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/IDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
         <option value="$PROJECT_DIR$/WebService/Program.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1k51QcNFgJraBSNt9IZPDoxUs7q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -100,6 +126,7 @@
       <workItem from="1604975627865" duration="94000" />
       <workItem from="1604975811655" duration="3858000" />
       <workItem from="1604981924538" duration="2745000" />
+      <workItem from="1604998785873" duration="9510000" />
     </task>
     <servers />
   </component>
@@ -112,22 +139,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1604998682105">
+    <state x="796" y="414" key="Github.ShareDialog" timestamp="1604998880589">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1604998682105" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1604998682105">
+    <state x="796" y="414" key="Github.ShareDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1604998880589" />
+    <state x="634" y="222" key="Github.UntrackedFilesDialog" timestamp="1604998889638">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1604998682105" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1604998682105">
+    <state x="634" y="222" key="Github.UntrackedFilesDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1604998889638" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1604999239715">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1604998682105" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1604998682105">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1604999239715" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1604999239715">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1604998682105" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1604999239715" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1604999239714">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1604999239714" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1604999239715">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1604999239715" />
     <state x="552" y="248" key="Rider.ProjectTemplateDialog.Size" timestamp="1604975666038">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

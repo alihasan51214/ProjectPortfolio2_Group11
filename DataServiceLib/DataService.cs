@@ -4,7 +4,7 @@ using DataServiceLib.DBObjects;
 
 namespace DataServiceLib
 {
-  public class DataService
+  public class DataService 
     {    
         private readonly string _connectionString;
 
@@ -13,6 +13,9 @@ namespace DataServiceLib
             _connectionString = connectionString; 
         }
         
+        
+        
+        /*
         public IList<ActorsKnownForTitles> GetActorsKnownForTitles()
         {
             using var ctx = new Raw11Context(_connectionString);
@@ -114,5 +117,6 @@ namespace DataServiceLib
             using var ctx = new Raw11Context(_connectionString);
             return ctx.Writers.ToList();
         }
+        */
     }
 }
