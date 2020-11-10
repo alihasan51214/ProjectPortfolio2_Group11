@@ -7,11 +7,9 @@ namespace DataServiceLib
     {
         //ControllerUser createuser, login, logud, deleteuser, 
         //ControllerSearch GetMovies, getGenres, getActors,
-        //ControllerRate getRate, updateRate
+        //ControllerRate getRating, UpdateRating
         //ControllerBookmark AddBookmark, RemoveBookmark
-
-        
-
+         
         IList<TitleGenres> GetGenres();
         TitleGenres GetGenre();
         IList<TitleBasics> GetTitles();
@@ -22,8 +20,8 @@ namespace DataServiceLib
         bool AddBookmark(int id);
         bool DeleteBookmark(int id);
 
-        bool AddRate(int id);
-        bool UpdateRate(UserNameRate userNameRate);
+        bool AddRating(int id);
+        bool UpdateRatign(UserNameRate userNameRate);
         
 
     }

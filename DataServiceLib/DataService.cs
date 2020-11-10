@@ -4,7 +4,7 @@ using DataServiceLib.DBObjects;
 
 namespace DataServiceLib
 {
-  public class DataService 
+  public class DataService //: IDataService  
     {    
         private readonly string _connectionString;
 
@@ -12,9 +12,63 @@ namespace DataServiceLib
         {
             _connectionString = connectionString; 
         }
-        
-        
-        
+
+
+        public static List<Users> Users { get; set; }
+
+        public static List<BookmarkPerson> BookmarkPerson { get; set; }
+
+
+        private List<BookmarkPerson> _Bookmark = new List<BookmarkPerson>();
+        private List<BookmarkPerson> _BookmarkPerson = BookmarkPerson;
+
+        private List<Users> _users = Users;
+
+
+
+        public BookmarkPerson GetBookMark(int bookmarkid)
+        {
+
+            return _Bookmark.FirstOrDefault(x => x.BookMarkid == bookmarkid);
+            
+        }
+
+
+        public BookmarkPerson CreateBookmark(string nconst, int userid)
+        {
+            var bookmarkperson = new BookmarkPerson
+            {
+                Userid = _BookmarkPerson.Max(x => x.Userid) + 1,
+                Nconst = nconst
+          
+
+            };
+            _BookmarkPerson.Add(bookmarkperson);
+            return bookmarkperson;
+        }
+
+
+        public Users CreateUser(int UserId, string name, int age, string language,string mail)
+        {
+            var user = new Users
+            {
+                UserId = _users.Max(x => x.UserId) + 1,
+                Name = name,
+                Age= age,
+                Language = language
+                , Mail = mail
+               
+            };
+            _users.Add(user);
+            return user;
+        }
+
+        public Users GetUser(int userid)
+        {
+            return _users.FirstOrDefault(x => x.UserId == userid);
+        }
+
+
         /*
         public IList<ActorsKnownForTitles> GetActorsKnownForTitles()
         {
