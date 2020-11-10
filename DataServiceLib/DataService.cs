@@ -69,10 +69,11 @@ namespace DataServiceLib
             return _Genres;
         }
 
-          public TitleGenres GetGenres(string tconst, string Genres)
+          public TitleGenres GetGenres(string tconst, string genres)
         {
 
-            return IDataService.TitleGenre.FirstOrDefault(x => x.Tconst == tconst);
+            return IDataService.TitleGenre.Where(x => x.Tconst == tconst &&
+                           x.Genres == genres).FirstOrDefault();
 
         }
 
