@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class TitleEpisode
     {
-        [Key]
+    
         public string Tconst { get; set; }
         public string ParentTconst { get; set; }
         public int SeasonNumber { get; set; }

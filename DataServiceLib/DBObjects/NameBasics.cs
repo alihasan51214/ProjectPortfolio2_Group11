@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class NameBasics
     {
-        [Key]
+      
         public string Nconst { get; set; }
         public string PrimaryName { get; set; }
         public int BirthYear { get; set; }

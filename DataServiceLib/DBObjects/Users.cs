@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class Users
     {
-        [Key]
+       
         public int UserId { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }

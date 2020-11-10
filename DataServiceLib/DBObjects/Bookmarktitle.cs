@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class Bookmarktitle
     {
-        [Key]
+        
         public string Userid { get; set; }
         public string Tconst { get; set; }
 
