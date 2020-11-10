@@ -5,7 +5,7 @@ namespace DataServiceLib.DBObjects
 {
     public class BookmarkPerson
     {
-        public int BookMarkid { get; set; }
+        //public int BookMarkid { get; set; }
         public string Nconst { get; set; }
         public int Userid { get; set; }
         

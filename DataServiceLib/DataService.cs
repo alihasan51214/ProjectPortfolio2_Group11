@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Serialization;
 using DataServiceLib.DBObjects;
+using System;
 
 namespace DataServiceLib
 {
-  public class DataService //: IDataService  
+  public class DataService : IDataService  
     {    
         private readonly string _connectionString;
 
@@ -13,38 +15,104 @@ namespace DataServiceLib
             _connectionString = connectionString; 
         }
 
+ 
+        public List<BookmarkPerson> _BookmarkPerson = IDataService.BookmarkPerson;
+        private List<Users> _users = IDataService.Users;
+       public  List<TitleGenres> _Genres = IDataService.TitleGenre;
+        public List<UserNameRate> _Rating = IDataService.UserNameRate;
 
-        public static List<Users> Users { get; set; }
+        // what is done is above is  calling each class as an object, rather than calling them as a Datatype, which cannot be done
+        // the new Objectname() function is not used, because we dont want a new object everytime we call it, we want the same existing one.
 
-        public static List<BookmarkPerson> BookmarkPerson { get; set; }
-
-
-        private List<BookmarkPerson> _Bookmark = new List<BookmarkPerson>();
-        private List<BookmarkPerson> _BookmarkPerson = BookmarkPerson;
-
-        private List<Users> _users = Users;
-
-
-
-        public BookmarkPerson GetBookMark(int bookmarkid)
+        public IList<UserNameRate> GetRating()
         {
+            return _Rating;  // returns the object when calling the GetRating function
+        }
 
-            return BookmarkPerson.FirstOrDefault(x => x.BookMarkid == bookmarkid);
-            
+        public UserNameRate GetRating(int Userid, int nameindividrating, string nconst, DateTime DateTime)
+        {
+            return IDataService.UserNameRate.Where(x => x.UserId == Userid &&
+                       x.NameIndividRating == nameindividrating && x.Nconst == nconst).FirstOrDefault();
+
+            //parameters of the Object
         }
 
 
-        public BookmarkPerson CreateBookmark(string nconst, int userid)
+        public void CreateRating(UserNameRate usernamerate)  
+            // for adding +1 amounts of ratings , each time the CreateRating is called.
+        {
+            var maxId = _Rating.Max(x => x.UserId);
+            usernamerate.UserId = maxId + 1;  
+            _Rating.Add(usernamerate);
+        }
+
+       
+
+        public bool UpdateRating(UserNameRate usernamerate)
+        {
+            var dbRating = GetRating(usernamerate.UserId, usernamerate.NameIndividRating, usernamerate.Nconst, usernamerate.DateTime);
+            if (dbRating == null)
+            {
+                return false;
+            }
+            dbRating.UserId = usernamerate.UserId;
+            dbRating.NameIndividRating = usernamerate.NameIndividRating;
+            dbRating.Nconst = usernamerate.Nconst;
+            return true;
+
+            //If you try to call a non-existant rating, the function returns false and nothings happens, otherwise returns true
+        }
+
+
+        public IList<TitleGenres> GetGenre()
+        {
+            return _Genres;
+        }
+
+          public TitleGenres GetGenres(string tconst, string Genres)
+        {
+
+            return IDataService.TitleGenre.FirstOrDefault(x => x.Tconst == tconst);
+
+        }
+
+
+        public IList<BookmarkPerson> GetBookmarkPerson()
+        {
+            return _BookmarkPerson;
+        }
+
+
+        public BookmarkPerson GetBookMark(int userid,string nconst)
+        {
+         
+            return IDataService.BookmarkPerson.Where(x => x.Nconst == nconst &&
+                           x.Userid == userid).FirstOrDefault();
+  
+        }
+
+        public BookmarkPerson CreateBookmarkPerson(string nconst, int userid)
         {
             var bookmarkperson = new BookmarkPerson
             {
                 Userid = _BookmarkPerson.Max(x => x.Userid) + 1,
                 Nconst = nconst
-          
+
 
             };
             _BookmarkPerson.Add(bookmarkperson);
             return bookmarkperson;
+        }
+
+        public bool DeleteBookmarkPerson(string nconst, int userid)
+        {
+            var dbBook = GetBookMark(userid,nconst);
+            if (dbBook == null)
+            {
+                return false;
+            }
+            _BookmarkPerson.Remove(dbBook);
+            return true;
         }
 
 

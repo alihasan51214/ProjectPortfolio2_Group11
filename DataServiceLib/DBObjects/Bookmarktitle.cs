@@ -2,7 +2,7 @@
 
 namespace DataServiceLib.DBObjects
 {
-    public class Bookmarktitle
+    public class BookmarkTitle
     {
         
         public string Userid { get; set; }

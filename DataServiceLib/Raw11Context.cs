@@ -16,7 +16,7 @@ namespace DataServiceLib
         public DbSet<ActorsKnownForTitles> ActorsKnownForTitles { get; set; }
         public DbSet<ActorsProfession> ActorsProfessions { get; set; }
         public DbSet<BookmarkPerson> BookmarkPerson { get; set; }
-        public DbSet<Bookmarktitle> Bookmarktitle { get; set; }
+        public DbSet<BookmarkTitle> BookmarkTitle { get; set; }
         public DbSet<Directors> Directors { get; set; }
         public DbSet<TitleEpisode> EpisodeTitles { get; set; }
         public DbSet<TitleGenres> Genres { get; set; }
@@ -49,16 +49,16 @@ namespace DataServiceLib
             modelBuilder.Entity<ActorsProfession>().HasKey(c => new { c.Nconst, c.PrimaryProfession });
 
             modelBuilder.Entity<BookmarkPerson>().ToTable("bookmarkpersons");
-            modelBuilder.Entity<BookmarkPerson>().Property(x => x.BookMarkid).HasColumnName("bookmarkid");
+           // modelBuilder.Entity<BookmarkPerson>().Property(x => x.BookMarkid).HasColumnName("bookmarkid");
             modelBuilder.Entity<BookmarkPerson>().Property(x => x.Userid).HasColumnName("userid");
             modelBuilder.Entity<BookmarkPerson>().Property(x => x.Nconst).HasColumnName("nconst");
             modelBuilder.Entity<BookmarkPerson>().HasKey(c => new { c.Userid, c.Nconst });
 
-            modelBuilder.Entity<Bookmarktitle>().ToTable("bookmarktitles");
-            modelBuilder.Entity<Bookmarktitle>().Property(x => x.Userid).HasColumnName("bookmarkid");
-            modelBuilder.Entity<Bookmarktitle>().Property(x => x.Userid).HasColumnName("userid");
-            modelBuilder.Entity<Bookmarktitle>().Property(x => x.Tconst).HasColumnName("tconst");
-            modelBuilder.Entity<Bookmarktitle>().HasKey(c => new { c.Userid, c.Tconst });
+            modelBuilder.Entity<BookmarkTitle>().ToTable("bookmarktitles");
+            modelBuilder.Entity<BookmarkTitle>().Property(x => x.Userid).HasColumnName("bookmarkid");
+            modelBuilder.Entity<BookmarkTitle>().Property(x => x.Userid).HasColumnName("userid");
+            modelBuilder.Entity<BookmarkTitle>().Property(x => x.Tconst).HasColumnName("tconst");
+            modelBuilder.Entity<BookmarkTitle>().HasKey(c => new { c.Userid, c.Tconst });
 
             modelBuilder.Entity<Directors>().ToTable("directors");
             modelBuilder.Entity<Directors>().Property(x => x.Tconst).HasColumnName("tconst");
