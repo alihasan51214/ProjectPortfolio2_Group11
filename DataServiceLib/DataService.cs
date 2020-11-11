@@ -6,7 +6,8 @@ using System;
 
 namespace DataServiceLib
 {
-  public class DataService : IDataService  
+  public class DataService : IDataService  //IDataService is an interface used by the DataService. 
+        //All the Create/Get/Update/Delete functions used in this class are made in the interface
     {    
         private readonly string _connectionString;
 
@@ -21,12 +22,15 @@ namespace DataServiceLib
        public  List<TitleGenres> _Genres = IDataService.TitleGenre;
         public List<UserNameRate> _Rating = IDataService.UserNameRate;
 
-        // what is done is above is  calling each class as an object, rather than calling them as a Datatype, which cannot be done
-        // the new Objectname() function is not used, because we dont want a new object everytime we call it, we want the same existing one.
+        // what is done is above is  calling each class as an object, because you cannot it call it as a Datatype
+        // the new ObjectName() function is not used, because we dont want to create a new object everytime we call it, 
+        // we want the same already existing one to be used.
 
-        public IList<UserNameRate> GetRating()
+        public IList<UserNameRate> GetRating() 
+  // uses IList interface,Represents a non-generic collection of objects that can be individually accessed by index. 
         {
-            return _Rating;  // returns the object when calling the GetRating function
+      return _Rating;  // returns the object when calling the GetRating function, 
+                       //from the List<ObjectName> as shown above in line 19
         }
 
         public UserNameRate GetRatings(int Userid, int nameindividrating, string nconst, DateTime DateTime)
@@ -34,12 +38,14 @@ namespace DataServiceLib
             return IDataService.UserNameRate.Where(x => x.UserId == Userid &&
                        x.NameIndividRating == nameindividrating && x.Nconst == nconst).FirstOrDefault();
 
-            //parameters of the Object
+            //parameters of the Object that needs to be returned
         }
 
 
         public void CreateRating(UserNameRate usernamerate)  
-            // for adding +1 amounts of ratings , each time the CreateRating is called.
+          
+            // everytime this function is called, 1 new rating is made.
+         
         {
             var maxId = _Rating.Max(x => x.UserId);
             usernamerate.UserId = maxId + 1;  
@@ -60,7 +66,9 @@ namespace DataServiceLib
             dbRating.Nconst = usernamerate.Nconst;
             return true;
 
-            //If you try to call a non-existant rating, the function returns false and nothings happens, otherwise returns true
+  //If you try to update a non-existant rating, the function returns false and nothings happens, 
+  //otherwise, if not false, it returns true and a rating has been updated.
+  
         }
 
 
@@ -114,6 +122,8 @@ namespace DataServiceLib
             }
             _BookmarkPerson.Remove(dbBook);
             return true;
+  //If you try to delete a non-existant BookmarkPerson, the function returns false and nothing happens, 
+   //otherwise, if not false, it returns true and a BookmarkPerson has been deleted.
         }
 
 
