@@ -1,4 +1,5 @@
 ﻿using DataServiceLib;
+using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -14,6 +15,11 @@ namespace ProjectPortfolio2_Group11.Controller
         {
             _dataService = dataService;
         }
-
+        
+        [HttpPost]
+        public IActionResult CreateUsers(UsersForCreationDTO ufcDto)
+        { 
+            
+        }
     }
 }

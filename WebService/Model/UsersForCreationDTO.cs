@@ -2,7 +2,7 @@
 
 namespace DataServiceLib.DBObjects
 {
-    public class UsersForCreationOrUpdateDTO
+    public class UsersForCreationDTO
     {
         public string Name { get; set; }
         public int Age { get; set; }

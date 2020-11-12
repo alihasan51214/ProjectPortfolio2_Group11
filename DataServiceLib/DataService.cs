@@ -35,6 +35,7 @@ namespace DataServiceLib
                 Mail = mail
             };
             db.Users.Add(user);
+            db.SaveChanges();
             return user;
         }
 
