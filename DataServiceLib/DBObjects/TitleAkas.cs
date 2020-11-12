@@ -4,7 +4,6 @@ namespace DataServiceLib.DBObjects
 {
     public class TitleAkas
     {
-        
         public string TitleID { get; set; }
         public int Ordering { get; set; }
         public string Title { get; set; }
