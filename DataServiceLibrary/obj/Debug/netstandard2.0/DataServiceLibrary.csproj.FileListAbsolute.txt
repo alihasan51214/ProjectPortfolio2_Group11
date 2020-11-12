@@ -1,0 +1,9 @@
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\bin\Debug\netstandard2.0\DataServiceLibrary.deps.json
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\bin\Debug\netstandard2.0\DataServiceLibrary.dll
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\bin\Debug\netstandard2.0\DataServiceLibrary.pdb
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.csprojAssemblyReference.cache
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.dll
+C:\Users\HP\Source\Repos\ProjectPortfolio2_Group11\DataServiceLibrary\obj\Debug\netstandard2.0\DataServiceLibrary.pdb
