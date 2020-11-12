@@ -10,10 +10,5 @@ namespace DataServiceLib.DBObjects
         public string Category { get; set; }
         public string Job { get; set; }
         public string Characters { get; set; }
-        
-        public override string ToString()
-        {
-            return $"Tconst = {Tconst}, Ordering= {Ordering},Nconst= {Nconst}, Category= {Category}, Job= {Job}, Characters= {Characters} ";
-        }
     }    
 }

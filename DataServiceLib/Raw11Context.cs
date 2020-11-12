@@ -9,7 +9,6 @@ namespace DataServiceLib
 
         public Raw11Context(string connectionString)
         {
-
             _connectionString = connectionString;
         }
 

@@ -12,10 +12,5 @@ namespace DataServiceLib.DBObjects
         public string Types { get; set; }
         public string Attributes { get; set; }
         public string IsOriginalTitle { get; set; }
-        
-        public override string ToString()
-        {
-            return $"TitleID = {TitleID}, Ordering = {Ordering}, Title ={ Title}, Region = {Region}, Language = {Language},Types = {Types}, Attributes = {Attributes}, IsOriginalTitle = {IsOriginalTitle} ";
-        }
     }
 }

@@ -9,10 +9,5 @@ namespace DataServiceLib.DBObjects
         public int NameIndividRating { get; set; }
         public string Nconst { get; set; }
         public DateTime DateTime { get; set; }
-        
-        public override string ToString()
-        {
-            return $"UserId = {UserId}, NameIndividRating= {NameIndividRating},Nconst= {Nconst},DateTime= {DateTime} ";
-        }
     }
 }

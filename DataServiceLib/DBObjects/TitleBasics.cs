@@ -17,10 +17,5 @@ namespace DataServiceLib.DBObjects
         public string Plot { get; set; }
         public int AvarageRating { get; set; }
         public int NumVotes { get; set; }
-        
-        public override string ToString()
-        {
-            return $"Tconst = {Tconst}, TitleType = {TitleType}, PrimaryTitle ={ PrimaryTitle}, OriginalTitle = {OriginalTitle}, IsAdult = {IsAdult},StartYear = {StartYear}, EndYear = {EndYear}, RunTimeMinutes = {RunTimeMinutes}, Poster ={ Poster}, Awards ={ Awards}, Plot ={ Plot}, AvarageRating ={ AvarageRating}, NumVotes ={ NumVotes} ";
-        }
     }
 }

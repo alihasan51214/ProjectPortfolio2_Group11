@@ -8,10 +8,5 @@ namespace DataServiceLib.DBObjects
         public string ParentTconst { get; set; }
         public int SeasonNumber { get; set; }
         public int EpisodeNumber { get; set; }
-
-        public override string ToString()
-        {
-            return $"Tconst = {Tconst}, ParentTconst = {ParentTconst}, SeasonNumber ={ SeasonNumber},EpisodeNumber ={ EpisodeNumber} ";
-        }
     }
 }

@@ -6,10 +6,5 @@ namespace DataServiceLib.DBObjects
     {
         public string Tconst { get; set; }
         public string Genres { get; set; }
-       /* 
-        public override string ToString()
-        {
-            return $"Tconst = {Tconst}, Genres= {Genres}";
-        }*/
     }
 }

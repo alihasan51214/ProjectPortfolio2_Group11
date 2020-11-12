@@ -8,10 +8,5 @@ namespace DataServiceLib.DBObjects
         public string PrimaryName { get; set; }
         public int BirthYear { get; set; }
         public int DeathYear { get; set; }
-        
-        public override string ToString()
-        {
-            return $"Nconst = {Nconst}, PrimaryName = {PrimaryName}, BirthYear ={ BirthYear}, DeathYear = {DeathYear}";
-        }
     }
 }
