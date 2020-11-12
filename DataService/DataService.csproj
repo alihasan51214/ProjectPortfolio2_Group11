@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="DataServiceLib.csproj" />
+    <None Include="obj\DataServiceLib.csproj.nuget.g.props" />
+    <None Include="obj\rider.project.restore.info" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\DataServiceLib.csproj.nuget.g.targets" />
+    <None Include="obj\DataServiceLib.csproj.nuget.dgspec.json" />
+    <None Include="obj\project.packagespec.json" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.dll" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.pdb" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.csproj.FileListAbsolute.txt" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.assets.cache" />
+    <None Include="obj\Debug\netcoreapp3.1\DataServiceLib.AssemblyInfoInputs.cache" />
+    <None Include="bin\Debug\netcoreapp3.1\DataServiceLib.deps.json" />
+    <None Include="bin\Debug\netcoreapp3.1\DataServiceLib.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\DataServiceLib.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp3.1\DataServiceLib.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" />
+  </ItemGroup>
+</Project>
