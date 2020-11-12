@@ -24,7 +24,7 @@ namespace DataServiceLib
             return db.Users.FirstOrDefault(x => x.UserId == userid);
         }
 
-        public Users CreateUser(string name, int age, string language,string mail)
+        public void CreateUser(string name, int age, string language,string mail)
         {
             var user = new Users
             {
@@ -36,12 +36,18 @@ namespace DataServiceLib
             };
             db.Users.Add(user);
             db.SaveChanges();
-            return user;
         }
 
-        public bool DeleteUser()
+        public bool DeleteUser(int userid)
         {
-            throw new NotImplementedException();
+            var user = GetUser(userid);
+            if (user == null)
+            {
+                return false;
+            }
+            db.Users.Remove(user);
+            db.SaveChanges();
+            return true;
         }
 
         public bool Login()

@@ -28,7 +28,7 @@ namespace ProjectPortfolio2_Group11
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

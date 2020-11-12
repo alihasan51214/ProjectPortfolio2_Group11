@@ -7,8 +7,8 @@ namespace DataServiceLib
     public interface IDataService
     {
         Users GetUser(int userid);
-        Users CreateUser(string name, int age, string language, string mail);
-        bool DeleteUser();
+        void CreateUser(string name, int age, string language, string mail);
+        bool DeleteUser(int userid);
         bool Login();
         bool Logout();
         

@@ -26,8 +26,5 @@ namespace ProjectPortfolio2_Group11.Controller
             var genres = _dataService.GetGenre();
             return Ok(genres);
         }
-        
-        
-        
     }
 }
