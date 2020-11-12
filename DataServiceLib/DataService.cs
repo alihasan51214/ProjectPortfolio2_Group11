@@ -130,7 +130,7 @@ namespace DataServiceLib
         //TitleGenre methods
         public IList<TitleGenres> GetGenre()
         {
-            return _genres;
+            return _genres.ToList();
         }
 
         public TitleGenres GetGenres(string tconst, string genres)
