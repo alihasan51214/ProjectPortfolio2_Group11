@@ -7,7 +7,7 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/Search")]
     public class SearchController : ControllerBase
     {
-        private IDataService _dataService;
+        private readonly IDataService _dataService;
         private const int MaxPageSize = 100;
 
         public SearchController(IDataService dataService)

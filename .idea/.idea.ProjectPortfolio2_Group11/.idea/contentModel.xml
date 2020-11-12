@@ -49,7 +49,16 @@
           <e p="SearchController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
-        <e p="Model" t="Include" />
+        <e p="Model" t="Include">
+          <e p="BookmarkPersonCreationOrUpdateDTO.cs" t="Include" />
+          <e p="BookmarkPersonDTO.cs" t="Include" />
+          <e p="TitleGenresDTO.cs" t="Include" />
+          <e p="TitleGenresForCreationOrUpdateDTO.cs" t="Include" />
+          <e p="UserNameRateDTO.cs" t="Include" />
+          <e p="UserNameRateForCreationOrUpdateDTO.cs" t="Include" />
+          <e p="UsersDTO.cs" t="Include" />
+          <e p="UsersForCreationDTO.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
