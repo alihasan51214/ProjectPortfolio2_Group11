@@ -7,10 +7,10 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/Search")]
     public class SearchController : ControllerBase
     {
-        private readonly IDataService _dataService;
+        private readonly DataServiceFacade _dataService;
         private const int MaxPageSize = 100;
 
-        public SearchController(IDataService dataService)
+        public SearchController(DataServiceFacade dataService)
         {
             _dataService = dataService;
         }
@@ -23,7 +23,7 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet]
         public IActionResult GetGenres()
         {
-            var genres = _dataService.GetGenre();
+            var genres = _dataService._genre.GetGenre();
             return Ok(genres);
         }
     }

@@ -6,7 +6,17 @@
     <e p="D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11" t="IncludeFlat">
       <e p="DataServiceLib" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="DataService.cs" t="Include" />
+        <e p="DataService" t="Include">
+          <e p="BookmarkingDataService.cs" t="Include" />
+          <e p="IBookmarkingDataService.cs" t="Include" />
+          <e p="IRatingDataService.cs" t="Include" />
+          <e p="ITitleGenreDataService.cs" t="Include" />
+          <e p="IUsersDataService.cs" t="Include" />
+          <e p="RatingDataService.cs" t="Include" />
+          <e p="TitleGenreDataService.cs" t="Include" />
+          <e p="UsersDataService.cs" t="Include" />
+        </e>
+        <e p="DataServiceFacade.cs" t="Include" />
         <e p="DataServiceLib.csproj" t="IncludeRecursive" />
         <e p="DBObjects" t="Include">
           <e p="ActorsKnownForTitles.cs" t="Include" />
@@ -27,7 +37,6 @@
           <e p="WordSearch.cs" t="Include" />
           <e p="Writer.cs" t="Include" />
         </e>
-        <e p="IDataService.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -50,12 +59,11 @@
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
-          <e p="BookmarkPersonCreationOrUpdateDTO.cs" t="Include" />
           <e p="BookmarkPersonDTO.cs" t="Include" />
           <e p="TitleGenresDTO.cs" t="Include" />
           <e p="TitleGenresForCreationOrUpdateDTO.cs" t="Include" />
           <e p="UserNameRateDTO.cs" t="Include" />
-          <e p="UserNameRateForCreationOrUpdateDTO.cs" t="Include" />
+          <e p="UserNameRateForCreationDto.cs" t="Include" />
           <e p="UsersDTO.cs" t="Include" />
           <e p="UsersForCreationDTO.cs" t="Include" />
         </e>

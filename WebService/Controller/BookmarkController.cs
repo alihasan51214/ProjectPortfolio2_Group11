@@ -9,9 +9,9 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/bookmark")]
     public class BookmarkController : ControllerBase
     {
-        private readonly IDataService _dataService;
+        private readonly DataServiceFacade _dataService;
 
-        public BookmarkController(IDataService dataService)
+        public BookmarkController(DataServiceFacade dataService)
         {
             _dataService = dataService;
         }
@@ -19,14 +19,14 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet("getbookmark")]
         public IActionResult GetBookMark(BookmarkPersonDTO bookDto)
         {
-            var bookmark = _dataService.GetBookMark(bookDto.Userid, bookDto.Nconst);
+            var bookmark = _dataService._bookmarking.GetBookMark(bookDto.Userid, bookDto.Nconst);
             return Ok(bookmark);
         }
 
         [HttpPost("createbookmark")]
         public IActionResult CreateBookmarkPerson(BookmarkPersonDTO bookDto)
         {
-            _dataService.CreateBookmarkPerson(bookDto.Nconst, bookDto.Userid);
+            _dataService._bookmarking.CreateBookmarkPerson(bookDto.Nconst, bookDto.Userid);
             var response = " user succesfully created";
             return CreatedAtRoute(null, bookDto.Userid + bookDto.Nconst + response);
         }
@@ -34,15 +34,13 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpDelete("delete")]
         public IActionResult DeleteBookmarkPerson(BookmarkPersonDTO bookDto)
         {
-            var bookmark = _dataService.DeleteBookmarkPerson(bookDto.Nconst, bookDto.Userid);
+            var bookmark = _dataService._bookmarking.DeleteBookmarkPerson(bookDto.Nconst, bookDto.Userid);
             var response = " bookmark not found";
 
             if (!bookmark)
             {
                 return NotFound(response);
             }
- 
-
             response = " bookmark deleted succesfully";
             return CreatedAtRoute(null, bookDto.Userid + response);
         }

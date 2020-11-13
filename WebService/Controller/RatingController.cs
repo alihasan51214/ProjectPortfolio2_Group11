@@ -7,9 +7,9 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/rating")]
     public class RatingController :  ControllerBase
     {
-        private IDataService _dataService;
+        private DataServiceFacade _dataService;
 
-        public RatingController(IDataService dataService)
+        public RatingController(DataServiceFacade dataService)
         {
             _dataService = dataService;
         }

@@ -9,9 +9,9 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        private readonly IDataService _dataService;
+        private readonly DataServiceFacade _dataService;
 
-        public UsersController(IDataService dataService)
+        public UsersController(DataServiceFacade dataService)
         {
             _dataService = dataService;
         }
@@ -19,14 +19,14 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet("getuser")]
         public IActionResult GetUser(UsersDTO uDto)
         {
-            var user = _dataService.GetUser(uDto.UserId);
+            var user = _dataService._users.GetUser(uDto.UserId);
             return Ok(user);
         }
 
         [HttpPost("register")]
         public IActionResult CreateUsers(UsersForCreationDTO ufcDto)
         {
-            _dataService.CreateUser(ufcDto.Name, ufcDto.Age, ufcDto.Language, ufcDto.Mail);
+            _dataService._users.CreateUser(ufcDto.Name, ufcDto.Age, ufcDto.Language, ufcDto.Mail);
             var response = " user succesfully created";
             return CreatedAtRoute(null, ufcDto.Name + response);
         }
@@ -34,7 +34,7 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpDelete("delete")]
         public IActionResult DeleteUser(UsersDTO uDto)
         {
-            var user =_dataService.DeleteUser(uDto.UserId);
+            var user =_dataService._users.DeleteUser(uDto.UserId);
             var response = " user not found";
 
             if (!user)
