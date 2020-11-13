@@ -3,6 +3,7 @@ using System.Linq;
 using System.Xml.Serialization;
 using DataServiceLib.DBObjects;
 using System;
+<<<<<<< Updated upstream
 
 namespace DataServiceLib
 {
@@ -16,6 +17,43 @@ namespace DataServiceLib
         private List<Users> _users = IDataService.Users;
        public  List<TitleGenres> _Genres = IDataService.TitleGenre;
         public List<UserNameRate> _Rating = IDataService.UserNameRate;
+=======
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+
+namespace DataServiceLib
+{
+    public class DataService : IDataService
+    {
+        private readonly string connStr;
+        private readonly Raw11Context db;
+
+        public DataService(IConfiguration configuration)
+        {
+            connStr = configuration.GetSection("connectionString").Value;
+            db = new Raw11Context(connStr);
+        }
+
+        //Users methods
+        public Users GetUser(int userid)
+        {
+            return db.Users.FirstOrDefault(x => x.UserId == userid);
+        }
+
+        public void CreateUser(string name, int age, string language, string mail)
+        {
+            var user = new Users
+            {
+                UserId = db.Users.Max(x => x.UserId) + 1,
+                Name = name,
+                Age = age,
+                Language = language,
+                Mail = mail
+            };
+            db.Users.Add(user);
+            db.SaveChanges();
+        }
+>>>>>>> Stashed changes
 
         // what is done is above is  calling each class as an object, because you cannot it call it as a Datatype
         // the new ObjectName() function is not used, because we dont want to create a new object everytime we call it, 
@@ -28,11 +66,24 @@ namespace DataServiceLib
                        //from the List<ObjectName> as shown above in line 19
         }
 
+<<<<<<< Updated upstream
         public UserNameRate GetRatings(int Userid, int nameindividrating, string nconst, DateTime DateTime)
+=======
+        public bool Logout()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        //Rating methods
+        public IList<UserNameRate> GetRating()
+>>>>>>> Stashed changes
         {
             return IDataService.UserNameRate.Where(x => x.UserId == Userid &&
                        x.NameIndividRating == nameindividrating && x.Nconst == nconst).FirstOrDefault();
 
+<<<<<<< Updated upstream
             //parameters of the Object that needs to be returned
         }
 
@@ -41,6 +92,15 @@ namespace DataServiceLib
           
             // everytime this function is called, 1 new rating is made.
          
+=======
+        public UserNameRate GetRating(int userid, int nameindividrating, string nconst, DateTime dateTime)
+        {
+            return db.UserNameRates.FirstOrDefault(x => x.UserId == userid &&
+                                                                 x.NameIndividRating == nameindividrating && x.Nconst == nconst);
+        }
+
+        public void CreateRating(UserNameRate usernamerate)
+>>>>>>> Stashed changes
         {
             var maxId = _Rating.Max(x => x.UserId);
             usernamerate.UserId = maxId + 1;  
@@ -67,6 +127,7 @@ namespace DataServiceLib
         }
 
 
+<<<<<<< Updated upstream
         public IList<TitleGenres> GetGenre()
         {
             return _Genres;
@@ -81,11 +142,16 @@ namespace DataServiceLib
         }
 
 
+=======
+
+        //Bookmarking methods
+>>>>>>> Stashed changes
         public IList<BookmarkPerson> GetBookmarkPerson()
         {
             return _BookmarkPerson;
         }
 
+<<<<<<< Updated upstream
 
         public BookmarkPerson GetBookMark(int userid,string nconst)
         {
@@ -93,6 +159,13 @@ namespace DataServiceLib
             return IDataService.BookmarkPerson.Where(x => x.Nconst == nconst &&
                            x.Userid == userid).FirstOrDefault();
   
+=======
+        public BookmarkPerson GetBookMark(int userid, string nconst)
+        {
+
+            return db.BookmarkPerson.FirstOrDefault(x => x.Nconst == nconst &&
+                                                                   x.Userid == userid);
+>>>>>>> Stashed changes
         }
 
         public BookmarkPerson CreateBookmarkPerson(string nconst, int userid)
@@ -110,7 +183,7 @@ namespace DataServiceLib
 
         public bool DeleteBookmarkPerson(string nconst, int userid)
         {
-            var dbBook = GetBookMark(userid,nconst);
+            var dbBook = GetBookMark(userid, nconst);
             if (dbBook == null)
             {
                 return false;
@@ -120,6 +193,13 @@ namespace DataServiceLib
   //If you try to delete a non-existant BookmarkPerson, the function returns false and nothing happens, 
    //otherwise, if not false, it returns true and a BookmarkPerson has been deleted.
         }
+<<<<<<< Updated upstream
+=======
+
+
+
+        //TitleGenre methods
+>>>>>>> Stashed changes
 
 
         public Users CreateUser(int UserId, string name, int age, string language,string mail)
@@ -141,6 +221,29 @@ namespace DataServiceLib
         {
             return _users.FirstOrDefault(x => x.UserId == userid);
         }
+<<<<<<< Updated upstream
          
+=======
+
+
+       
+
+        public IList<SearchHistory> CreateSearch(string arg)
+        {
+            var queery = db.SearchHistory.FromSqlInterpolated($"select * from string_search({arg})");
+
+            db.SaveChanges();
+            return db.SearchHistory
+                .ToList();
+        }  
+
+        public  SearchHistory GetSearch(int userid)
+        {
+            db.SaveChanges();
+            return db.SearchHistory.FirstOrDefault(x => x.UserId == userid );
+        }
+
+      
+>>>>>>> Stashed changes
     }
 }

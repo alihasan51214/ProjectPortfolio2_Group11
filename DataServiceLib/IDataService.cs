@@ -40,6 +40,19 @@ namespace DataServiceLib
 
 
         
+<<<<<<< Updated upstream
 
+=======
+        
+        IList<TitleGenres> GetGenre();
+        TitleGenres GetGenres(string tconst, string genres);
+
+   
+
+       
+        SearchHistory GetSearch(int userid);
+
+        IList<SearchHistory> CreateSearch(string arg);
+>>>>>>> Stashed changes
     }
 }
