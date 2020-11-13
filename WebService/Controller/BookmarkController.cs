@@ -19,14 +19,14 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet("getbookmark")]
         public IActionResult GetBookMark(BookmarkPersonDTO bookDto)
         {
-            var bookmark = _dataService._bookmarking.GetBookMark(bookDto.Userid, bookDto.Nconst);
+            var bookmark = _dataService.Bookmarking.GetBookMark(bookDto.Userid, bookDto.Nconst);
             return Ok(bookmark);
         }
 
         [HttpPost("createbookmark")]
         public IActionResult CreateBookmarkPerson(BookmarkPersonDTO bookDto)
         {
-            _dataService._bookmarking.CreateBookmarkPerson(bookDto.Nconst, bookDto.Userid);
+            _dataService.Bookmarking.CreateBookmarkPerson(bookDto.Nconst, bookDto.Userid);
             var response = " user succesfully created";
             return CreatedAtRoute(null, bookDto.Userid + bookDto.Nconst + response);
         }
@@ -34,7 +34,7 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpDelete("delete")]
         public IActionResult DeleteBookmarkPerson(BookmarkPersonDTO bookDto)
         {
-            var bookmark = _dataService._bookmarking.DeleteBookmarkPerson(bookDto.Nconst, bookDto.Userid);
+            var bookmark = _dataService.Bookmarking.DeleteBookmarkPerson(bookDto.Nconst, bookDto.Userid);
             var response = " bookmark not found";
 
             if (!bookmark)

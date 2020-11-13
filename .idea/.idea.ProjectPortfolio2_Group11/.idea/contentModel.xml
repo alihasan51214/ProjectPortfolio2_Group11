@@ -8,12 +8,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DataService" t="Include">
           <e p="BookmarkingDataService.cs" t="Include" />
-          <e p="IBookmarkingDataService.cs" t="Include" />
-          <e p="IRatingDataService.cs" t="Include" />
-          <e p="ITitleGenreDataService.cs" t="Include" />
-          <e p="IUsersDataService.cs" t="Include" />
           <e p="RatingDataService.cs" t="Include" />
-          <e p="TitleGenreDataService.cs" t="Include" />
+          <e p="SearchDataService.cs" t="Include" />
           <e p="UsersDataService.cs" t="Include" />
         </e>
         <e p="DataServiceFacade.cs" t="Include" />
@@ -36,6 +32,12 @@
           <e p="UserTitleRate.cs" t="Include" />
           <e p="WordSearch.cs" t="Include" />
           <e p="Writer.cs" t="Include" />
+        </e>
+        <e p="IDataService" t="Include">
+          <e p="IBookmarkingDataService.cs" t="Include" />
+          <e p="IRatingDataService.cs" t="Include" />
+          <e p="ISearchDataService.cs" t="Include" />
+          <e p="IUsersDataService.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

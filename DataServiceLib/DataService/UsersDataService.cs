@@ -13,9 +13,7 @@ namespace DataServiceLib.DataService
         {
             _db = new Raw11Context(connStr);
         }
-
-   
-        //Users methods
+        
         public Users GetUser(int userid)
         {
             return _db.Users.FirstOrDefault(x => x.UserId == userid);
@@ -45,6 +43,11 @@ namespace DataServiceLib.DataService
             _db.Users.Remove(user);
             _db.SaveChanges();
             return true;
+        }
+
+        public bool UpdateUser(Users user)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Login()

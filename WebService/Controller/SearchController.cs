@@ -23,7 +23,7 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet]
         public IActionResult GetGenres()
         {
-            var genres = _dataService._genre.GetGenre();
+            var genres = _dataService.Search.GetGenre();
             return Ok(genres);
         }
     }

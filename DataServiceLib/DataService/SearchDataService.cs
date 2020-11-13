@@ -5,11 +5,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace DataServiceLib.DataService
 {
-    public class TitleGenreDataService : ITitleGenreDataService
+    public class SearchDataService : ISearchDataService
     {
         private readonly Raw11Context _db;
         
-        public TitleGenreDataService(string connStr)
+        public SearchDataService(string connStr)
         {
             _db = new Raw11Context(connStr);
         }
