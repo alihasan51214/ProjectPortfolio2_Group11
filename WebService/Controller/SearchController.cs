@@ -1,4 +1,5 @@
-﻿using DataServiceLib;
+﻿using AutoMapper;
+using DataServiceLib;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProjectPortfolio2_Group11.Controller
@@ -8,23 +9,12 @@ namespace ProjectPortfolio2_Group11.Controller
     public class SearchController : ControllerBase
     {
         private readonly DataServiceFacade _dataService;
-        private const int MaxPageSize = 100;
-
-        public SearchController(DataServiceFacade dataService)
+        private readonly IMapper _mapper;
+        
+        public SearchController(DataServiceFacade dataService, IMapper mapper)
         {
             _dataService = dataService;
-        }
-        
-        private int CheckPageSize(int pageSize)
-        {
-            return pageSize > MaxPageSize ? MaxPageSize : pageSize;
-        }
-        
-        [HttpGet]
-        public IActionResult GetGenres()
-        {
-            var genres = _dataService.Search.GetGenre();
-            return Ok(genres);
+            _mapper = mapper;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using DataServiceLib.DBObjects;
-using Microsoft.Extensions.Configuration;
+using DataServiceLib.IDataService;
 
 namespace DataServiceLib.DataService
 {

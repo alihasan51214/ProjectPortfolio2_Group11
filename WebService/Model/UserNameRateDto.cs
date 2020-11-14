@@ -1,9 +1,8 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace DataServiceLib.DBObjects
+namespace ProjectPortfolio2_Group11.Model
 {
-    public class UserNameRateDTO
+    public class UserNameRateDto
     { 
       
         public int UserId { get; set; }

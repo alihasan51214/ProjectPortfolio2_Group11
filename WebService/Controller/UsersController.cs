@@ -1,6 +1,7 @@
-﻿using DataServiceLib;
-using DataServiceLib.DBObjects;
+﻿using AutoMapper;
+using DataServiceLib;
 using Microsoft.AspNetCore.Mvc;
+using ProjectPortfolio2_Group11.Model;
 
 
 namespace ProjectPortfolio2_Group11.Controller
@@ -10,31 +11,33 @@ namespace ProjectPortfolio2_Group11.Controller
     public class UsersController : ControllerBase
     {
         private readonly DataServiceFacade _dataService;
+        private readonly IMapper _mapper;
 
-        public UsersController(DataServiceFacade dataService)
+        public UsersController(DataServiceFacade dataService, IMapper mapper)
         {
             _dataService = dataService;
+            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetUser(UsersDTO uDto)
+        public IActionResult GetUser(int id)
         {
-            var user = _dataService.Users.GetUser(uDto.UserId);
+            var user = _dataService.UsersDS.GetUser(id);
             return Ok(user);
         }
 
         [HttpPost()]
-        public IActionResult CreateUsers(UsersForCreationDTO ufcDto)
+        public IActionResult CreateUsers(UsersDto dto)
         {
-            _dataService.Users.CreateUser(ufcDto.Name, ufcDto.Age, ufcDto.Language, ufcDto.Mail);
+            _dataService.UsersDS.CreateUser(dto.Name, dto.Age, dto.Language, dto.Mail);
             var response = " user created";
-            return CreatedAtRoute(null, ufcDto.Name + response);
+            return CreatedAtRoute(null, dto.Name + response);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteUser(UsersDTO uDto)
+        public IActionResult DeleteUser(int id, UsersDto dto)
         {
-            var user =_dataService.Users.DeleteUser(uDto.UserId);
+            var user =_dataService.UsersDS.DeleteUser(id);
             var response = " user not found";
 
             if (!user)
@@ -42,7 +45,7 @@ namespace ProjectPortfolio2_Group11.Controller
                 return NotFound(response);
             }
             response = " user deleted";
-            return CreatedAtRoute(null, uDto.Name + response);
+            return CreatedAtRoute(null, dto.Name + response);
         }
         /*
         [HttpPut("{id}")]

@@ -1,6 +1,8 @@
-﻿using DataServiceLib;
+﻿using AutoMapper;
+using DataServiceLib;
 using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
+using ProjectPortfolio2_Group11.Model;
 
 
 namespace ProjectPortfolio2_Group11.Controller
@@ -10,39 +12,63 @@ namespace ProjectPortfolio2_Group11.Controller
     public class BookmarkController : ControllerBase
     {
         private readonly DataServiceFacade _dataService;
-
-        public BookmarkController(DataServiceFacade dataService)
+        private readonly IMapper _mapper;
+        public BookmarkController(DataServiceFacade dataService, IMapper mapper)
         {
             _dataService = dataService;
+            _mapper = mapper;
+        }
+        
+        [HttpGet]
+        public IActionResult GetBookMarkList()
+        {
+            var bookmark = _dataService.BookmarkingDS.GetBookmarkList();
+            return Ok(_mapper.Map<BookmarkPersonDto>(bookmark));
         }
 
-        [HttpGet("getbookmark")]
-        public IActionResult GetBookMark(BookmarkPersonDTO bookDto)
+
+        [HttpGet("{id}")]
+        public IActionResult GetBookMark(int userid)
         {
-            var bookmark = _dataService.Bookmarking.GetBookMark(bookDto.Userid, bookDto.Nconst);
-            return Ok(bookmark);
+            var bookmark = _dataService.BookmarkingDS.GetBookMark(userid);
+            if (bookmark == null)
+            {
+                return NotFound();
+            }
+            return Ok(_mapper.Map<BookmarkPersonDto>(bookmark));
         }
 
-        [HttpPost("createbookmark")]
-        public IActionResult CreateBookmarkPerson(BookmarkPersonDTO bookDto)
+        [HttpPost]
+        public IActionResult CreateBookmark(BookmarkPersonDto bookDto)
         {
-            _dataService.Bookmarking.CreateBookmarkPerson(bookDto.Nconst, bookDto.Userid);
-            var response = " user succesfully created";
-            return CreatedAtRoute(null, bookDto.Userid + bookDto.Nconst + response);
+            var bookmark = _mapper.Map<BookmarkPerson>(bookDto);
+            _dataService.BookmarkingDS.CreateBookmark(bookmark);
+            var response = " bookmark created";
+            return CreatedAtRoute(null, response);
         }
 
-        [HttpDelete("delete")]
-        public IActionResult DeleteBookmarkPerson(BookmarkPersonDTO bookDto)
+        [HttpPut("{id}")]
+        public IActionResult UpdateBookmark(int userid)
         {
-            var bookmark = _dataService.Bookmarking.DeleteBookmarkPerson(bookDto.Nconst, bookDto.Userid);
+            var bookmark = _mapper.Map<BookmarkPerson>(userid);
+            if (_dataService.BookmarkingDS.UpdateBookmark(bookmark))
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+        
+        
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBookmark(int userid)
+        {
             var response = " bookmark not found";
-
-            if (!bookmark)
+            if (!_dataService.BookmarkingDS.DeleteBookmark(userid))
             {
                 return NotFound(response);
             }
             response = " bookmark deleted succesfully";
-            return CreatedAtRoute(null, bookDto.Userid + response);
+            return CreatedAtRoute(null, userid + response);
         }
     }
 }

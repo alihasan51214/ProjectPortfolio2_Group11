@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DataServiceLib.DBObjects;
-using Microsoft.Extensions.Configuration;
+using DataServiceLib.IDataService;
 
 namespace DataServiceLib.DataService
 {
@@ -15,7 +15,7 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<UserNameRate> GetRating()
+        public IList<UserNameRate> GetRatingList()
         {
             return _db.UserNameRates.ToList();
         }
@@ -26,11 +26,17 @@ namespace DataServiceLib.DataService
                                                         x.NameIndividRating == nameindividrating && x.Nconst == nconst); 
         }
         
-        public void CreateRating(UserNameRate usernamerate)
+        public void CreateRating(int nameIndividRating, string nconst, DateTime dateTime)
         {
-            var maxId = _db.UserNameRates.Max(x => x.UserId);
-            usernamerate.UserId = maxId + 1;   // for adding +1 amounts of ratings , each time the CreateRating is called.
+            var usernamerate = new UserNameRate
+            {
+                UserId = _db.UserNameRates.Max(x => x.UserId) + 1,
+                NameIndividRating = nameIndividRating,
+                Nconst = nconst,
+                DateTime = dateTime
+            };
             _db.UserNameRates.Add(usernamerate);
+            _db.SaveChanges();
         }
 
         public bool UpdateRating(UserNameRate usernamerate)
@@ -43,6 +49,7 @@ namespace DataServiceLib.DataService
             dbRating.UserId = usernamerate.UserId;
             dbRating.NameIndividRating = usernamerate.NameIndividRating;
             dbRating.Nconst = usernamerate.Nconst;
+            _db.SaveChanges();
             return true;
         }
     }

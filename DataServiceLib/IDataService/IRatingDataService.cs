@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using DataServiceLib.DBObjects;
 
-namespace DataServiceLib.DataService
+namespace DataServiceLib.IDataService
 {
     public interface IRatingDataService
     {
-        IList<UserNameRate> GetRating();
+        IList<UserNameRate> GetRatingList();
         UserNameRate GetRating(int userId, int nameIndividRating, string nconst, DateTime dateTime);
-        void CreateRating(UserNameRate usernamerate);
+        void CreateRating(int nameIndividRating, string nconst, DateTime dateTime);
         bool UpdateRating(UserNameRate usernamerate);
     }
 }

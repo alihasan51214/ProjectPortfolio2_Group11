@@ -1,6 +1,6 @@
 ﻿using DataServiceLib.DBObjects;
 
-namespace DataServiceLib.DataService
+namespace DataServiceLib.IDataService
 {
     public interface IUsersDataService
     {

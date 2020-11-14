@@ -1,3 +1,5 @@
+using System;
+using AutoMapper;
 using DataServiceLib;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +16,7 @@ namespace ProjectPortfolio2_Group11
         {
             services.AddControllers();
             services.AddSingleton<DataServiceFacade>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

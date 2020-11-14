@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DataServiceLib.DBObjects;
-using Microsoft.Extensions.Configuration;
+using DataServiceLib.IDataService;
 
 namespace DataServiceLib.DataService
 {
@@ -14,37 +14,48 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<BookmarkPerson> GetBookmarkPerson()
+        public IList<BookmarkPerson> GetBookmarkList()
         {
             return _db.BookmarkPerson.ToList();
         }
         
-        public BookmarkPerson GetBookMark(int userid,string nconst)
+        public BookmarkPerson GetBookMark(int userid)
         {
-         
-            return _db.BookmarkPerson.FirstOrDefault(x => x.Nconst == nconst &&
-                                                         x.Userid == userid);
+            return _db.BookmarkPerson.FirstOrDefault(x => x.Userid == userid);
         }
         
-        public BookmarkPerson CreateBookmarkPerson(string nconst, int userid)
+        public void CreateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var bookmarkperson = new BookmarkPerson
+            var maxId = _db.BookmarkPerson.Max(x => x.Userid);
+            bookmarkPerson.Userid = maxId + 1;
+            _db.BookmarkPerson.Add(bookmarkPerson);
+            _db.SaveChanges();
+        }
+        
+        public bool UpdateBookmark(BookmarkPerson bookmarkPerson)
+        {
+            var dbBook = GetBookMark(bookmarkPerson.Userid);
+            if (dbBook == null)
             {
-                Userid = _db.BookmarkPerson.Max(x => x.Userid) + 1,
-                Nconst = nconst
-            };
-            _db.BookmarkPerson.Add(bookmarkperson);
-            return bookmarkperson;
+                return false;
+            }
+
+            dbBook.Userid = bookmarkPerson.Userid;
+            dbBook.Nconst = bookmarkPerson.Nconst; 
+            _db.BookmarkPerson.Remove(dbBook);
+            _db.SaveChanges();
+            return true;
         }
 
-        public bool DeleteBookmarkPerson(string nconst, int userid)
+        public bool DeleteBookmark(int userid)
         {
-            var dbBook = GetBookMark(userid,nconst);
+            var dbBook = GetBookMark(userid);
             if (dbBook == null)
             {
                 return false;
             }
             _db.BookmarkPerson.Remove(dbBook);
+            _db.SaveChanges();
             return true;
         }
     }

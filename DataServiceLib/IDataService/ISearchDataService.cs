@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DataServiceLib.DBObjects;
 
-namespace DataServiceLib.DataService
+namespace DataServiceLib.IDataService
 {
     public interface ISearchDataService
     {
-        IList<TitleGenres> GetGenre();
-        TitleGenres GetGenres(string tconst, string genres);
+        SearchHistory GetSearchHistory(int userid);
+        void AddToSearchHistory(int userid, string searchInput, DateTime searchTime);
+        
     }
 }

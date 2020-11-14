@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DataServiceLib.DBObjects;
-using Microsoft.Extensions.Configuration;
+using DataServiceLib.IDataService;
 
 namespace DataServiceLib.DataService
 {
@@ -14,16 +15,14 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<TitleGenres> GetGenre()
+        public SearchHistory GetSearchHistory(int userid)
         {
-            return _db.Genres
-                .ToList();
+            return _db.SearchHistory.FirstOrDefault(x => x.UserId == userid);
         }
 
-        public TitleGenres GetGenres(string tconst, string genres)
+        public void AddToSearchHistory(int userid, string searchInput, DateTime searchTime)
         {
-            return _db.Genres.FirstOrDefault(x => x.Tconst == tconst &&
-                                                 x.Genres == genres);
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
 using DataServiceLib.DBObjects;
 
-namespace DataServiceLib.DataService
+namespace DataServiceLib.IDataService
 {
     public interface IBookmarkingDataService
     {
-        IList<BookmarkPerson> GetBookmarkPerson();
-        BookmarkPerson GetBookMark(int userid, string nconst);
-        BookmarkPerson CreateBookmarkPerson(string nconst, int userid);
-        bool DeleteBookmarkPerson(string nconst, int userid);
+      
+        IList<BookmarkPerson> GetBookmarkList();
+        BookmarkPerson GetBookMark(int userid);
+        void CreateBookmark(BookmarkPerson bookmarkPerson);
+        bool UpdateBookmark(BookmarkPerson bookmarkPerson);
+        bool DeleteBookmark(int userid);
     }
 }
