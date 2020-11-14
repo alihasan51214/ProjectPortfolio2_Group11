@@ -14,16 +14,13 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<BookmarkPerson> GetBookmarkList()
-        {
-            return _db.BookmarkPerson.ToList();
-        }
+      
 
         public BookmarkPerson GetBookMark(int userid, string nconst)
         {
 
-            return _db.BookmarkPerson.FirstOrDefault(x => x.Nconst == nconst &&
-                                                                   x.UserId == userid);
+            return _db.BookmarkPerson.FirstOrDefault(x => x.UserId==userid 
+                                                    && x.Nconst == nconst);
         }
 
         public void CreateBookmark(BookmarkPerson bookmarkPerson)

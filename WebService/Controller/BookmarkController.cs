@@ -19,18 +19,12 @@ namespace ProjectPortfolio2_Group11.Controller
             _dataService = dataService;
             _mapper = mapper;
         }
-        
-        
-        [HttpGet]
-        public IActionResult GetBookMarkList()
-        {
-            var bookmark = _dataService.BookmarkingDS.GetBookmarkList();
-            return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmark));
-        }
-        
-        
-    //    [HttpGet("{userid}")]
-        [HttpGet("get")]
+         
+
+            [HttpGet("{userid}/{nconst}")]
+
+            // uses userid and nconst as the URL path
+       
         public IActionResult GetBookMark(int userid,string nconst)
         {
             var bookmark = _dataService.BookmarkingDS.GetBookMark(userid,nconst);
@@ -42,7 +36,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
 
-        [HttpPost("post")]
+        [HttpPost("{userid}")]
         public IActionResult CreateBookmark(BookmarkPersonForCreationDto bookDto)
         {
             var bookmark = _mapper.Map<BookmarkPerson>(bookDto);
@@ -50,9 +44,9 @@ namespace ProjectPortfolio2_Group11.Controller
             return Created("", bookmark);
         }
 
-        
-        [HttpPut("{UserId}")]
-        public IActionResult UpdateBookmark(int UserId)
+
+        [HttpPut("{userid}/{nconst}")]
+        public IActionResult UpdateBookmark(int UserId,string Nconst)
         {
             var bookmark = _mapper.Map<BookmarkPerson>(UserId);
             if (_dataService.BookmarkingDS.UpdateBookmark(bookmark))
@@ -61,9 +55,9 @@ namespace ProjectPortfolio2_Group11.Controller
             }
             return NoContent();
         }
-        
-        
-        [HttpDelete("{UserId}")]
+
+
+        [HttpDelete("{userid}/{nconst}")]
         public IActionResult DeleteBookmark(int userid,string nconst)
         {
             var response = " bookmark not found";
