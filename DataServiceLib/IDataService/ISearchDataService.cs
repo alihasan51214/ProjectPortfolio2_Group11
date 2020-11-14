@@ -6,8 +6,9 @@ namespace DataServiceLib.IDataService
 {
     public interface ISearchDataService
     {
-        SearchHistory GetSearchHistory(int userid);
-        void AddToSearchHistory(int userid, string searchInput, DateTime searchTime);
+        SearchHistory GetSearchHistory(int userId);
+        void AddToSearchHistory(int userId, string searchInput, DateTime searchTime);
+        
         
     }
 }

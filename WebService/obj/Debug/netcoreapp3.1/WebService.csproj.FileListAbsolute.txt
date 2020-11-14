@@ -84,3 +84,5 @@ C:\Users\bob-w\Source\Repos\ProjectPortfolio2_Group11\WebService\obj\Debug\netco
 C:\Users\bob-w\Source\Repos\ProjectPortfolio2_Group11\WebService\obj\Debug\netcoreapp3.1\WebService.dll
 C:\Users\bob-w\Source\Repos\ProjectPortfolio2_Group11\WebService\obj\Debug\netcoreapp3.1\WebService.pdb
 C:\Users\bob-w\Source\Repos\ProjectPortfolio2_Group11\WebService\obj\Debug\netcoreapp3.1\WebService.genruntimeconfig.cache
+D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

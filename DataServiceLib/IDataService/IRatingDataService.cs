@@ -7,8 +7,9 @@ namespace DataServiceLib.IDataService
     public interface IRatingDataService
     {
         IList<UserNameRate> GetRatingList();
-        UserNameRate GetRating(int userId, int nameIndividRating, string nconst, DateTime dateTime);
-        void CreateRating(int nameIndividRating, string nconst, DateTime dateTime);
-        bool UpdateRating(UserNameRate usernamerate);
+        UserNameRate GetRating(int userId);
+        void CreateRating(UserNameRate userNameRate);
+        bool UpdateRating(UserNameRate userNameRate);
+        bool DeleteRating(int userId);
     }
 }

@@ -19,37 +19,36 @@ namespace DataServiceLib.DataService
             return _db.BookmarkPerson.ToList();
         }
         
-        public BookmarkPerson GetBookMark(int userid)
+        public BookmarkPerson GetBookMark(int userId)
         {
-            return _db.BookmarkPerson.FirstOrDefault(x => x.Userid == userid);
+            return _db.BookmarkPerson.FirstOrDefault(x => x.UserId == userId);
         }
         
         public void CreateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var maxId = _db.BookmarkPerson.Max(x => x.Userid);
-            bookmarkPerson.Userid = maxId + 1;
+            var maxId = _db.BookmarkPerson.Max(x => x.UserId);
+            bookmarkPerson.UserId = maxId + 1;
             _db.BookmarkPerson.Add(bookmarkPerson);
             _db.SaveChanges();
         }
         
         public bool UpdateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var dbBook = GetBookMark(bookmarkPerson.Userid);
+            var dbBook = GetBookMark(bookmarkPerson.UserId);
             if (dbBook == null)
             {
                 return false;
             }
 
-            dbBook.Userid = bookmarkPerson.Userid;
+            dbBook.UserId = bookmarkPerson.UserId;
             dbBook.Nconst = bookmarkPerson.Nconst; 
-            _db.BookmarkPerson.Remove(dbBook);
             _db.SaveChanges();
             return true;
         }
 
-        public bool DeleteBookmark(int userid)
+        public bool DeleteBookmark(int userId)
         {
-            var dbBook = GetBookMark(userid);
+            var dbBook = GetBookMark(userId);
             if (dbBook == null)
             {
                 return false;

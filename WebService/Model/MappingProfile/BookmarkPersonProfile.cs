@@ -8,6 +8,7 @@ namespace ProjectPortfolio2_Group11.Model.MappingProfile
         public BookmarkPersonProfile()
         {
             CreateMap<BookmarkPerson, BookmarkPersonDto>();
+            CreateMap<BookmarkPersonForCreationDto, BookmarkPerson>();
         }
     }
 }

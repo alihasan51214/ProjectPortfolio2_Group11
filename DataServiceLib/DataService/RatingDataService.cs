@@ -20,35 +20,43 @@ namespace DataServiceLib.DataService
             return _db.UserNameRates.ToList();
         }
 
-        public UserNameRate GetRating(int userid, int nameindividrating, string nconst, DateTime dateTime)
+        public UserNameRate GetRating(int userId)
         {
-            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userid && 
-                                                        x.NameIndividRating == nameindividrating && x.Nconst == nconst); 
+            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userId); 
         }
         
-        public void CreateRating(int nameIndividRating, string nconst, DateTime dateTime)
+        public void CreateRating(UserNameRate userNameRate)
         {
-            var usernamerate = new UserNameRate
-            {
-                UserId = _db.UserNameRates.Max(x => x.UserId) + 1,
-                NameIndividRating = nameIndividRating,
-                Nconst = nconst,
-                DateTime = dateTime
-            };
-            _db.UserNameRates.Add(usernamerate);
+            var maxId = _db.UserNameRates.Max(x => x.UserId);
+            userNameRate.UserId = maxId + 1;
+            _db.UserNameRates.Add(userNameRate);
             _db.SaveChanges();
         }
 
-        public bool UpdateRating(UserNameRate usernamerate)
+        public bool UpdateRating(UserNameRate userNameRate)
         {
-            var dbRating = GetRating(usernamerate.UserId, usernamerate.NameIndividRating, usernamerate.Nconst, usernamerate.DateTime);
-            if (dbRating == null)
+            var dbUserNameRate = GetRating(userNameRate.UserId);
+            if (dbUserNameRate == null)
             {
                 return false;
             }
-            dbRating.UserId = usernamerate.UserId;
-            dbRating.NameIndividRating = usernamerate.NameIndividRating;
-            dbRating.Nconst = usernamerate.Nconst;
+
+            dbUserNameRate.UserId = userNameRate.UserId;
+            dbUserNameRate.NameIndividRating = userNameRate.NameIndividRating;
+            dbUserNameRate.Nconst = userNameRate.Nconst;
+            dbUserNameRate.DateTime = userNameRate.DateTime;
+            _db.SaveChanges();
+            return true;
+        }
+        
+        public bool DeleteRating(int userId)
+        {
+            var dbUserNameRate = GetRating(userId);
+            if (dbUserNameRate == null)
+            {
+                return false;
+            }
+            _db.UserNameRates.Remove(dbUserNameRate);
             _db.SaveChanges();
             return true;
         }

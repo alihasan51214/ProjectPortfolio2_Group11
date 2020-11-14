@@ -48,9 +48,9 @@ namespace DataServiceLib
             modelBuilder.Entity<ActorsProfession>().HasKey(c => new { c.Nconst, c.PrimaryProfession });
 
             modelBuilder.Entity<BookmarkPerson>().ToTable("bookmarkpersons");
-            modelBuilder.Entity<BookmarkPerson>().Property(x => x.Userid).HasColumnName("userid");
+            modelBuilder.Entity<BookmarkPerson>().Property(x => x.UserId).HasColumnName("userid");
             modelBuilder.Entity<BookmarkPerson>().Property(x => x.Nconst).HasColumnName("nconst");
-            modelBuilder.Entity<BookmarkPerson>().HasKey(c => new { c.Userid, c.Nconst });
+            modelBuilder.Entity<BookmarkPerson>().HasKey(c => new { Userid = c.UserId, c.Nconst });
 
             modelBuilder.Entity<BookmarkTitle>().ToTable("bookmarktitles");
             modelBuilder.Entity<BookmarkTitle>().Property(x => x.Userid).HasColumnName("bookmarkid");

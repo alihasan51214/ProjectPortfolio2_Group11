@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DataServiceLib;
+using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
 using ProjectPortfolio2_Group11.Model;
 
@@ -19,46 +20,50 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetUser(int id)
+        
+        [HttpGet("{userId}")]
+        public IActionResult GetUser(int userId)
         {
-            var user = _dataService.UsersDS.GetUser(id);
-            return Ok(user);
+            var user = _dataService.UsersDS.GetUser(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(_mapper.Map<UsersDto>(user));
         }
 
+        
         [HttpPost()]
-        public IActionResult CreateUsers(UsersDto dto)
+        public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
-            _dataService.UsersDS.CreateUser(dto.Name, dto.Age, dto.Language, dto.Mail);
-            var response = " user created";
-            return CreatedAtRoute(null, dto.Name + response);
+            var user = _mapper.Map<Users>(usersForCreationDto);
+            _dataService.UsersDS.CreateUser(user);
+            return Created("", user);
         }
-
-        [HttpDelete("{id}")]
-        public IActionResult DeleteUser(int id, UsersDto dto)
+        
+        
+        [HttpPut("{userId}")]
+        public IActionResult UpdateUser(int userId)
         {
-            var user =_dataService.UsersDS.DeleteUser(id);
-            var response = " user not found";
+            var user = _mapper.Map<Users>(userId);
+            if (_dataService.UsersDS.UpdateUser(user))
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+        
 
-            if (!user)
+        [HttpDelete("{userId}")]
+        public IActionResult DeleteUser(int userId)
+        {
+            var response = " user not found";
+            if (!_dataService.UsersDS.DeleteUser(userId))
             {
                 return NotFound(response);
             }
             response = " user deleted";
-            return CreatedAtRoute(null, dto.Name + response);
+            return CreatedAtRoute(null, userId + response);
         }
-        /*
-        [HttpPut("{id}")]
-        public IActionResult UpdateUser(int id, UsersForCreationDTO ufcDto)
-        {
-            _dataService.Users.CreateUser(ufcDto.Name, ufcDto.Age, ufcDto.Language, ufcDto.Mail);
-
-            if (!_dataService.UpdateCategory(category))
-            {
-                return NotFound();
-            }
-
-            return NoContent();
-        }*/
     }
 }
