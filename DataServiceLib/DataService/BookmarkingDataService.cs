@@ -18,23 +18,25 @@ namespace DataServiceLib.DataService
         {
             return _db.BookmarkPerson.ToList();
         }
-        
-        public BookmarkPerson GetBookMark(int userId)
+
+        public BookmarkPerson GetBookMark(int userid, string nconst)
         {
-            return _db.BookmarkPerson.FirstOrDefault(x => x.UserId == userId);
+
+            return _db.BookmarkPerson.FirstOrDefault(x => x.Nconst == nconst &&
+                                                                   x.UserId == userid);
         }
-        
+
         public void CreateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var maxId = _db.BookmarkPerson.Max(x => x.UserId);
-            bookmarkPerson.UserId = maxId + 1;
+
+            bookmarkPerson.UserId = bookmarkPerson.UserId;
             _db.BookmarkPerson.Add(bookmarkPerson);
             _db.SaveChanges();
         }
         
         public bool UpdateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var dbBook = GetBookMark(bookmarkPerson.UserId);
+            var dbBook = GetBookMark(bookmarkPerson.UserId,bookmarkPerson.Nconst);
             if (dbBook == null)
             {
                 return false;
@@ -46,9 +48,9 @@ namespace DataServiceLib.DataService
             return true;
         }
 
-        public bool DeleteBookmark(int userId)
+        public bool DeleteBookmark(int userid, string nconst)
         {
-            var dbBook = GetBookMark(userId);
+            var dbBook = GetBookMark(userid,nconst);
             if (dbBook == null)
             {
                 return false;

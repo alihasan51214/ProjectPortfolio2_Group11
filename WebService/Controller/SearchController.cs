@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using DataServiceLib;
+using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
+using ProjectPortfolio2_Group11.Model;
 
 namespace ProjectPortfolio2_Group11.Controller
 {
@@ -10,11 +12,21 @@ namespace ProjectPortfolio2_Group11.Controller
     {
         private readonly DataServiceFacade _dataService;
         private readonly IMapper _mapper;
-        
+
         public SearchController(DataServiceFacade dataService, IMapper mapper)
         {
             _dataService = dataService;
             _mapper = mapper;
+        }
+
+
+        [HttpPost("new")]
+        public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
+        {
+            _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput,searchDTO.DateTime);
+
+            var response = " search created succesfully";
+            return CreatedAtRoute(null, response);
         }
     }
 }

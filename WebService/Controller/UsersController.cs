@@ -33,7 +33,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         
-        [HttpPost()]
+        [HttpPost("post")]
         public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
