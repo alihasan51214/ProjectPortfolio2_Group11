@@ -20,7 +20,22 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
 
-        [HttpPost("new")]
+        [HttpGet("{userid}")]
+
+        // uses userid and nconst as the URL path
+
+        public IActionResult GetSearchHistory(int userid)
+        {
+            var search = _dataService.SearchDS.GetSearchHistory(userid);
+            if (search == null)
+            {
+                return NotFound();
+            }
+            return Ok(search);
+        }
+
+        [HttpPost("{userid}")]
+    
         public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
         {
             _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput,searchDTO.DateTime);

@@ -5,6 +5,7 @@ using DataServiceLib.DBObjects;
 using DataServiceLib.IDataService;
  
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace DataServiceLib.DataService
 {
@@ -17,9 +18,11 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public SearchHistory GetSearchHistory(int userId)
+        public IList<SearchHistory> GetSearchHistory(int userid)
         {
-            return _db.SearchHistory.FirstOrDefault(x => x.UserId == userId);
+            return _db.SearchHistory.Where(x => x.UserId == userid).ToList()
+     
+            ;
         }
 
         public void AddToSearchHistory(int userId, string searchInput, DateTime searchTime)
@@ -36,18 +39,18 @@ namespace DataServiceLib.DataService
 
         }
 
-        public void AddToSearchHistory(SearchHistory searchhistory)
+      /*  public void AddToSearchHistory(SearchHistory searchhistory)
         {
             var dbUser = GetSearchHistory(searchhistory.UserId);
            
-            dbUser.UserId = searchhistory.UserId;
+            dbUser.userid = searchhistory.UserId;
             dbUser.SearchInput = searchhistory.SearchInput;
             
 
 
             _db.SaveChanges();
            // return true;
-        }
+        } */
 
 
 
