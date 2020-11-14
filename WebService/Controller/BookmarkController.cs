@@ -29,7 +29,8 @@ namespace ProjectPortfolio2_Group11.Controller
         }
         
         
-        [HttpGet("{id}")]
+    //    [HttpGet("{userid}")]
+        [HttpGet("get")]
         public IActionResult GetBookMark(int userid,string nconst)
         {
             var bookmark = _dataService.BookmarkingDS.GetBookMark(userid,nconst);
@@ -50,7 +51,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         
-        [HttpPut("{id}")]
+        [HttpPut("{UserId}")]
         public IActionResult UpdateBookmark(int UserId)
         {
             var bookmark = _mapper.Map<BookmarkPerson>(UserId);
@@ -62,7 +63,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
         
         
-        [HttpDelete("{id}")]
+        [HttpDelete("{UserId}")]
         public IActionResult DeleteBookmark(int userid,string nconst)
         {
             var response = " bookmark not found";

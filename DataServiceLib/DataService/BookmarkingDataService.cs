@@ -27,9 +27,7 @@ namespace DataServiceLib.DataService
         }
 
         public void CreateBookmark(BookmarkPerson bookmarkPerson)
-        {
-
-            bookmarkPerson.UserId = bookmarkPerson.UserId;
+        { 
             _db.BookmarkPerson.Add(bookmarkPerson);
             _db.SaveChanges();
         }
