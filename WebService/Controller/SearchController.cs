@@ -38,7 +38,7 @@ namespace ProjectPortfolio2_Group11.Controller
     
         public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
         {
-            _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput,searchDTO.DateTime);
+            _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
 
             var response = " search created succesfully";
             return CreatedAtRoute(null, response);

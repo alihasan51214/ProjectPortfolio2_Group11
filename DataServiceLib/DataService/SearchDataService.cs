@@ -25,16 +25,16 @@ namespace DataServiceLib.DataService
             ;
         }
 
-        public void AddToSearchHistory(int userId, string searchInput, DateTime searchTime)
+        public IList<SearchHistory> AddToSearchHistory(int userId, string searchInput)
         {
 
 
 
-            var queery = _db.SearchHistory.FromSqlInterpolated($"select * from string_search({userId},{searchInput}");
+            var queery = _db.SearchHistory.FromSqlInterpolated($"select * from string_search({userId},{searchInput})");
          //   _db.SearchHistory.Add();
             _db.SaveChanges();
-          /*  return queery
-               .ToList(); */
+          return queery
+               .ToList(); 
 
 
         }
