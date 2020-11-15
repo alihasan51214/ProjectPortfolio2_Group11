@@ -20,39 +20,15 @@ namespace DataServiceLib.DataService
 
         public IList<SearchHistory> GetSearchHistory(int userId)
         {
-            return _db.SearchHistory.Where(x => x.UserId == userId).ToList()
-
-            ;
+            return _db.SearchHistory.Where(x => x.UserId == userId).ToList();
         }
 
-        public IList<TitleBasicsDTO> AddToSearchHistory(int userId, string searchInput)
+        public IList<TitleBasicsDto> AddToSearchHistory(int userId, string searchInput)
         {
-
-
-
             var queery = _db.TitleBasicsDTO.FromSqlInterpolated($"select primarytitle from string_search({userId},{searchInput})");
-
-            //var queery = _db.TitleBasics.FromSqlInterpolated($"select * from string_search({userId},{searchInput})");
-
             _db.SaveChanges();
              return queery
-                 .ToList();  
-
-
+                 .ToList();
         }
-
-        /*  public void AddToSearchHistory(SearchHistory searchhistory)
-          {
-              var dbUser = GetSearchHistory(searchhistory.UserId);
-
-              dbUser.userid = searchhistory.UserId;
-              dbUser.SearchInput = searchhistory.SearchInput;
-
-              _db.SaveChanges();
-             // return true;
-          } */
-
-
-
     }
 }

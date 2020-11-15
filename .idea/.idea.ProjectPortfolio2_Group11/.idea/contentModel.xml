@@ -40,7 +40,6 @@
           <e p="IRatingDataService.cs" t="Include" />
           <e p="ISearchDataService.cs" t="Include" />
           <e p="IUsersDataService.cs" t="Include" />
-          <e p="TitleBasicsDTO.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

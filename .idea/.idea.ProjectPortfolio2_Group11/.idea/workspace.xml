@@ -25,76 +25,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/ActorsKnownForTitles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/ActorsKnownForTitles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/ActorsProfession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/ActorsProfession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/BookmarkPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/BookmarkPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/BookmarkTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/BookmarkTitle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/Directors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/Directors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/NameBasics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/NameBasics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleAkas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleAkas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleEpisode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleEpisode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleGenres.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleGenres.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitlePrincipals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitlePrincipals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/UserNameRate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/UserNameRate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/UserTitleRate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/UserTitleRate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/WordSearch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/WordSearch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/Writer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/Writer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/RatingDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/RatingDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/UsersDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/UsersDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataServiceFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataServiceFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/IBookmarkingDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/IBookmarkingDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/IRatingDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/IRatingDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/IUsersDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/IUsersDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/TitleBasicsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/TitleBasicsDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/TitleBasicsDTO.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/DataServiceLib.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/DataServiceLib.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/DataServiceLib.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/DataServiceLib.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controller/RatingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/RatingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controller/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Model/BookmarkPersonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/BookmarkPersonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Model/BookmarkPersonForCreationDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/BookmarkPersonForCreationDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Model/BasicsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/BasicsDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/Model/MappingProfile/SearchHistoryProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/MappingProfile/SearchHistoryProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/Model/MappingProfile/TitleBasicsProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/MappingProfile/TitleBasicsProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Model/UserNameRateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/UserNameRateDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Model/UserNameRateForCreationDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/UserNameRateForCreationDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Model/SearchHistoryDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/SearchHistoryDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/WebService.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/WebService.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/WebService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/WebService.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,31 +72,24 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/49/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataServiceLib/DBObjects/BookmarkPerson.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/A1/NotImplementedException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebService/Model/UsersForCreationDTO.cs" />
-        <option value="$PROJECT_DIR$/WebService/Startup.cs" />
-        <option value="$PROJECT_DIR$/WebService/Program.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfiles/BookmarkPersonProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfiles/UsersProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfiles/UserNameRateProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/BookmarkPersonDTO.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/SearchHistory.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/BookmarkPersonProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/UserNameRateProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/UsersForCreationDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/UsersDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/UsersProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/appsettings.json" />
-        <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IUsersDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IBookmarkingDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/TitleBasicsDTO.cs" />
@@ -153,7 +102,6 @@
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/NameBasics.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleAkas.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasics.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDTO.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleEpisode.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleGenres.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitlePrincipals.cs" />
@@ -165,8 +113,6 @@
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataServiceFacade.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/UsersDataService.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/UsersController.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/SearchHistoryProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/TitleBasicsProfile.cs" />
@@ -176,6 +122,14 @@
         <option value="$PROJECT_DIR$/WebService/Model/UserNameRateDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/BookmarkPersonForCreationDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/BookmarkPersonDto.cs" />
+        <option value="$PROJECT_DIR$/WebService/Model/BasicsDTO.cs" />
+        <option value="$PROJECT_DIR$/WebService/Model/SearchHistoryDTO.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDTO.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleBasicsDto.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +215,8 @@
       <workItem from="1605235073605" duration="5840000" />
       <workItem from="1605266590491" duration="28806000" />
       <workItem from="1605337586686" duration="2160000" />
-      <workItem from="1605469870095" duration="5442000" />
+      <workItem from="1605469870095" duration="6199000" />
+      <workItem from="1605478563117" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="Controllers Added">
       <created>1605013594208</created>
@@ -326,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605445711988</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixes">
+      <created>1605475965760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605475965760</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +319,8 @@
     <MESSAGE value="IDataService Map Created" />
     <MESSAGE value="Loads of addition and changes" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="418" key="#Firefox_Settings" timestamp="1605211898738">
@@ -380,22 +343,22 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="634" y="222" key="Github.UntrackedFilesDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1604998889638" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1605474662771">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1605480418372">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605474662771" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1605474662771">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605480418372" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1605480418372">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605474662771" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1605474662771">
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605480418372" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1605480418372">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605474662771" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1605474662771">
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605480418372" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1605480418372">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605474662771" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605480418372" />
     <state width="1877" height="372" key="GridCell.Tab.1.bottom" timestamp="1605172096097">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -488,10 +451,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1605475957676" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605452016207">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605475971173">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605452016207" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605475971173" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605469927245">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -500,24 +463,5 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1605449025819" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs</url>
-          <line>34</line>
-          <properties documentPath="D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\DataServiceLib\DataService\BookmarkingDataService.cs" initialLine="37">
-            <startOffsets>
-              <option value="1068" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1069" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

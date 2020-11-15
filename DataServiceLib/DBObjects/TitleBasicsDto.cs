@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataServiceLib.DBObjects
 {
-    public class TitleBasicsDTO
+    public class TitleBasicsDto
     {
         public string PrimaryTitle { get; set; }
-    
     }
 }

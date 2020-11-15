@@ -20,10 +20,10 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
         
-        [HttpGet("{userid}")]
-        public IActionResult GetSearchHistory(int userid)
+        [HttpGet("{userId}")]
+        public IActionResult GetSearchHistory(int userId)
         {
-            var search = _dataService.SearchDs.GetSearchHistory(userid);
+            var search = _dataService.SearchDs.GetSearchHistory(userId);
             if (search == null)
             {
                 return NotFound();
@@ -31,14 +31,11 @@ namespace ProjectPortfolio2_Group11.Controller
             return Ok(search);
         }
 
-        [HttpPost("{userid}")]
-        public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
+        [HttpPost("{userId}")]
+        public IActionResult AddToSearchHistory(SearchHistoryDto searchDto)
         {
-            var search = _dataService.SearchDs.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
-
-            // var response = " search created succesfully";
+            var search = _dataService.SearchDs.AddToSearchHistory(searchDto.UserId, searchDto.SearchInput);
             return Ok(search);
-            //  return CreatedAtRoute(null,search);
         }
 
       /*  private BasicsDTO CreateMovieDto(BasicsDTO movie)

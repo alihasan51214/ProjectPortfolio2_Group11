@@ -3,11 +3,11 @@ using DataServiceLib.DBObjects;
 
 namespace ProjectPortfolio2_Group11.Model.MappingProfile
 {
-    public class TitleBasicsProfile : Profile
+    public class SearchHistoryProfile : Profile
     {
-        public TitleBasicsProfile()
+        public SearchHistoryProfile()
         {
-            CreateMap<TitleBasics, BasicsDTO>();
+            CreateMap<SearchHistory, SearchHistoryDto>();
         }
     }
 }
