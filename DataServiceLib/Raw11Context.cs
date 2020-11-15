@@ -22,7 +22,10 @@ namespace DataServiceLib
         public DbSet<NameBasics> NameBasics { get; set; }
         public DbSet<SearchHistory> SearchHistory { get; set; }
         public DbSet<TitleAkas> TitleAkas { get; set; }
-        public DbSet<TitleBasics> TitleBasics { get; set; }
+        public virtual DbSet<TitleBasics> TitleBasics { get; set; }
+
+      //  public virtual DbSet<SearchResults> SearchResults { get; set; }
+
         public DbSet<TitlePrincipals> TitlePrincipals { get; set; }
         public DbSet<UserNameRate> UserNameRates { get; set; }
         public DbSet<Users> Users { get; set; }
@@ -71,11 +74,15 @@ namespace DataServiceLib
             modelBuilder.Entity<NameBasics>().HasKey(x => x.Nconst);
 
             modelBuilder.Entity<SearchHistory>().ToTable("search_history");
+            modelBuilder.Entity<SearchHistory>().HasNoKey();
             modelBuilder.Entity<SearchHistory>().Property(x => x.UserId).HasColumnName("userid");
             modelBuilder.Entity<SearchHistory>().Property(x => x.SearchInput).HasColumnName("search_input");
             modelBuilder.Entity<SearchHistory>().Property(x => x.DateTime).HasColumnName("search_date");
-            modelBuilder.Entity<SearchHistory>().HasNoKey();
+     
 
+            //HasOne(v => v.Users).HasForeignKey(v => v.UserId);
+
+             
             modelBuilder.Entity<TitleAkas>().ToTable("title_akas");
             modelBuilder.Entity<TitleAkas>().Property(x => x.TitleID).HasColumnName("titleid");
             modelBuilder.Entity<TitleAkas>().Property(x => x.Ordering).HasColumnName("ordering");
@@ -86,9 +93,14 @@ namespace DataServiceLib
             modelBuilder.Entity<TitleAkas>().Property(x => x.Attributes).HasColumnName("attributes");
             modelBuilder.Entity<TitleAkas>().Property(x => x.IsOriginalTitle).HasColumnName("isoriginaltitle");
             modelBuilder.Entity<TitleAkas>().HasKey(c => new { c.TitleID, c.Ordering });
-            
+
+
+       
+
             modelBuilder.Entity<TitleBasics>().ToTable("title_basicsnew");
-            modelBuilder.Entity<TitleBasics>().Property(x => x.Tconst).HasColumnName("tconst");
+             modelBuilder.Entity<TitleBasics>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
+             modelBuilder.Entity<TitleBasics>().Property(x => x.Tconst).HasColumnName("tconst");
+            //modelBuilder.Entity<TitleBasics>().Ignore(x => x.Tconst);
             modelBuilder.Entity<TitleBasics>().Property(x => x.TitleType).HasColumnName("titletype");
             modelBuilder.Entity<TitleBasics>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
             modelBuilder.Entity<TitleBasics>().Property(x => x.OriginalTitle).HasColumnName("oritinaltitle");
@@ -101,7 +113,10 @@ namespace DataServiceLib
             modelBuilder.Entity<TitleBasics>().Property(x => x.Plot).HasColumnName("plot");
             modelBuilder.Entity<TitleBasics>().Property(x => x.AvarageRating).HasColumnName("averagerating");
             modelBuilder.Entity<TitleBasics>().Property(x => x.NumVotes).HasColumnName("numvotes");
-            modelBuilder.Entity<TitleBasics>().HasKey(c => new { c.Tconst });
+          modelBuilder.Entity<TitleBasics>().HasKey(c => new { c.Tconst });
+          
+            // modelBuilder.Entity<TitleBasics>().HasNoKey();
+
 
             modelBuilder.Entity<TitleEpisode>().ToTable("title_episode");
             modelBuilder.Entity<TitleEpisode>().Property(x => x.Tconst).HasColumnName("tconst");

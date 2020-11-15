@@ -19,20 +19,15 @@ namespace ProjectPortfolio2_Group11.Controller
             _dataService = dataService;
             _mapper = mapper;
         }
-        
-        
-        [HttpGet]
-        public IActionResult GetBookMarkList()
+         
+
+            [HttpGet("{userid}/{nconst}")]
+
+            // uses userid and nconst as the URL path
+       
+        public IActionResult GetBookMark(int userid,string nconst)
         {
-            var bookmark = _dataService.BookmarkingDS.GetBookmarkList();
-            return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmark));
-        }
-        
-        
-        [HttpGet("{id}")]
-        public IActionResult GetBookMark(int userId)
-        {
-            var bookmark = _dataService.BookmarkingDS.GetBookMark(userId);
+            var bookmark = _dataService.BookmarkingDS.GetBookMark(userid,nconst);
             if (bookmark == null)
             {
                 return NotFound();
@@ -40,8 +35,8 @@ namespace ProjectPortfolio2_Group11.Controller
             return Ok(_mapper.Map<BookmarkPersonDto>(bookmark));
         }
 
-        
-        [HttpPost]
+
+        [HttpPost("{userid}")]
         public IActionResult CreateBookmark(BookmarkPersonForCreationDto bookDto)
         {
             var bookmark = _mapper.Map<BookmarkPerson>(bookDto);
@@ -49,29 +44,29 @@ namespace ProjectPortfolio2_Group11.Controller
             return Created("", bookmark);
         }
 
-        
-        [HttpPut("{id}")]
-        public IActionResult UpdateBookmark(int userId)
+
+        [HttpPut("{userid}/{nconst}")]
+        public IActionResult UpdateBookmark(int UserId,string Nconst)
         {
-            var bookmark = _mapper.Map<BookmarkPerson>(userId);
+            var bookmark = _mapper.Map<BookmarkPerson>(UserId);
             if (_dataService.BookmarkingDS.UpdateBookmark(bookmark))
             {
                 return NotFound();
             }
             return NoContent();
         }
-        
-        
-        [HttpDelete("{id}")]
-        public IActionResult DeleteBookmark(int userId)
+
+
+        [HttpDelete("{userid}/{nconst}")]
+        public IActionResult DeleteBookmark(int userid,string nconst)
         {
             var response = " bookmark not found";
-            if (!_dataService.BookmarkingDS.DeleteBookmark(userId))
+            if (!_dataService.BookmarkingDS.DeleteBookmark(userid,nconst))
             {
                 return NotFound(response);
             }
             response = " bookmark deleted";
-            return CreatedAtRoute(null, userId + response);
+            return CreatedAtRoute(null, userid + response);
         }
     }
 }

@@ -14,27 +14,24 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<BookmarkPerson> GetBookmarkList()
+      
+
+        public BookmarkPerson GetBookMark(int userid, string nconst)
         {
-            return _db.BookmarkPerson.ToList();
+
+            return _db.BookmarkPerson.FirstOrDefault(x => x.UserId==userid 
+                                                    && x.Nconst == nconst);
         }
-        
-        public BookmarkPerson GetBookMark(int userId)
-        {
-            return _db.BookmarkPerson.FirstOrDefault(x => x.UserId == userId);
-        }
-        
+
         public void CreateBookmark(BookmarkPerson bookmarkPerson)
-        {
-            var maxId = _db.BookmarkPerson.Max(x => x.UserId);
-            bookmarkPerson.UserId = maxId + 1;
+        { 
             _db.BookmarkPerson.Add(bookmarkPerson);
             _db.SaveChanges();
         }
         
         public bool UpdateBookmark(BookmarkPerson bookmarkPerson)
         {
-            var dbBook = GetBookMark(bookmarkPerson.UserId);
+            var dbBook = GetBookMark(bookmarkPerson.UserId,bookmarkPerson.Nconst);
             if (dbBook == null)
             {
                 return false;
@@ -46,9 +43,9 @@ namespace DataServiceLib.DataService
             return true;
         }
 
-        public bool DeleteBookmark(int userId)
+        public bool DeleteBookmark(int userid, string nconst)
         {
-            var dbBook = GetBookMark(userId);
+            var dbBook = GetBookMark(userid,nconst);
             if (dbBook == null)
             {
                 return false;

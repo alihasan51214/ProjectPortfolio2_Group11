@@ -20,8 +20,7 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
 
-        
-        [HttpGet("{userId}")]
+             [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
         {
             var user = _dataService.UsersDS.GetUser(userId);
@@ -33,7 +32,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         
-        [HttpPost()]
+        [HttpPost("post")]
         public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
