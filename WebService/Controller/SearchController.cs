@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using DataServiceLib;
 using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +36,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         [HttpPost("{userid}")]
-    
+
         public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
         {
             _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
