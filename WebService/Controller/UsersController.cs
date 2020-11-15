@@ -20,44 +20,41 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
 
-             [HttpGet("{userId}")]
+        [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
         {
-            var user = _dataService.UsersDS.GetUser(userId);
+            var user = _dataService.UsersDs.GetUser(userId);
             if (user == null)
             {
                 return NotFound();
             }
             return Ok(_mapper.Map<UsersDto>(user));
         }
-
         
         [HttpPost("post")]
         public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
-            _dataService.UsersDS.CreateUser(user);
+            _dataService.UsersDs.CreateUser(user);
             return Created("", user);
         }
         
-        
         [HttpPut("{userId}")]
-        public IActionResult UpdateUser(int userId)
+        public IActionResult UpdateUser(int userId, UsersForCreationDto usersForCreationDto)
         {
-            var user = _mapper.Map<Users>(userId);
-            if (_dataService.UsersDS.UpdateUser(user))
+            var user = _mapper.Map<Users>(usersForCreationDto);
+            if (_dataService.UsersDs.UpdateUser(userId, user))
             {
                 return NotFound();
             }
             return NoContent();
         }
-        
 
         [HttpDelete("{userId}")]
         public IActionResult DeleteUser(int userId)
         {
             var response = " user not found";
-            if (!_dataService.UsersDS.DeleteUser(userId))
+            if (!_dataService.UsersDs.DeleteUser(userId))
             {
                 return NotFound(response);
             }

@@ -19,15 +19,11 @@ namespace ProjectPortfolio2_Group11.Controller
             _dataService = dataService;
             _mapper = mapper;
         }
-
-
+        
         [HttpGet("{userid}")]
-
-        // uses userid and nconst as the URL path
-
         public IActionResult GetSearchHistory(int userid)
         {
-            var search = _dataService.SearchDS.GetSearchHistory(userid);
+            var search = _dataService.SearchDs.GetSearchHistory(userid);
             if (search == null)
             {
                 return NotFound();
@@ -36,10 +32,9 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         [HttpPost("{userid}")]
-
         public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
         {
-            var search = _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
+            var search = _dataService.SearchDs.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
 
             // var response = " search created succesfully";
             return Ok(search);

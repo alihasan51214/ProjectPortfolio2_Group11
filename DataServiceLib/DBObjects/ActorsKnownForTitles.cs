@@ -4,7 +4,7 @@ namespace DataServiceLib.DBObjects
 {
     public class ActorsKnownForTitles
     {
-        public string Nconst { get; set; }
+        public string NConst { get; set; }
         public string KnownForTitles { get; set; }
     }
 }

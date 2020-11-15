@@ -2,7 +2,7 @@
 {
     public class BookmarkPersonForCreationDto
     {
-        public string Nconst { get; set; }
+        public string NConst { get; set; }
         public int UserId { get; set; }
     }
 }

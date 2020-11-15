@@ -20,53 +20,48 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
         
-        
         [HttpGet]
         public IActionResult GetRatingList()
         {
-            var userNameRates = _dataService.RatingDS.GetRatingList();
+            var userNameRates = _dataService.RatingDs.GetRatingList();
             return Ok(_mapper.Map<IEnumerable<UserNameRateDto>>(userNameRates));
         }
-        
-        
-        [HttpGet("{id}")]
-        public IActionResult GetRating(int userId)
+
+        [HttpGet("{userId}/{nConst}")]
+        public IActionResult GetRating(int userId, string nConst)
         {
-            var userNameRates = _dataService.RatingDS.GetRating(userId);
+            var userNameRates = _dataService.RatingDs.GetRating(userId, nConst);
             if (userNameRates == null)
             {
                 return NotFound();
             }
             return Ok(_mapper.Map<BookmarkPersonDto>(userNameRates));
         }
-
         
         [HttpPost]
         public IActionResult CreateBookmark(UserNameRateForCreationDto userNameRateForCreationDto)
         {
             var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
-            _dataService.RatingDS.CreateRating(userNameRate);
+            _dataService.RatingDs.CreateRating(userNameRate);
             return Created("", userNameRate);
         }
-
         
-        [HttpPut("{id}")]
-        public IActionResult UpdateRating(int userid)
+        [HttpPut("{userId}/{nConst}")]
+        public IActionResult UpdateRating(int userId, string nConst, UserNameRateForCreationDto userNameRateForCreationDto)
         {
-            var userNameRate = _mapper.Map<UserNameRate>(userid);
-            if (_dataService.RatingDS.UpdateRating(userNameRate))
+            var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
+            if (_dataService.RatingDs.UpdateRating(userId, nConst, userNameRate))
             {
                 return NotFound();
             }
             return NoContent();
         }
         
-        
-        [HttpDelete("{id}")]
-        public IActionResult DeleteRating(int userId)
+        [HttpDelete("{userId}/{nConst}")]
+        public IActionResult DeleteRating(int userId, string nConst)
         {
             var response = " rating not found";
-            if (!_dataService.RatingDS.DeleteRating(userId))
+            if (!_dataService.RatingDs.DeleteRating(userId, nConst))
             {
                 return NotFound(response);
             }

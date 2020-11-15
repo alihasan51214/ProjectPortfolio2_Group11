@@ -9,6 +9,6 @@ namespace DataServiceLib.IDataService
         //SearchHistory GetSearchHistory(int userId);
      //   void AddToSearchHistory(int userId, string searchInput);
         IList<TitleBasicsDTO> AddToSearchHistory(int userId, string searchInput);
-        IList<SearchHistory> GetSearchHistory(int userid);
+        IList<SearchHistory> GetSearchHistory(int userId);
     }
 }

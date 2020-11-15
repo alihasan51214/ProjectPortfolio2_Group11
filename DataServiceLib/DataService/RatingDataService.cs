@@ -19,39 +19,35 @@ namespace DataServiceLib.DataService
         {
             return _db.UserNameRates.ToList();
         }
-
-        public UserNameRate GetRating(int userId)
+        
+        public UserNameRate GetRating(int userId, string nConst)
         {
-            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userId); 
+            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userId
+                                                         && x.NConst == nConst); 
         }
         
         public void CreateRating(UserNameRate userNameRate)
         {
-            var maxId = _db.UserNameRates.Max(x => x.UserId);
-            userNameRate.UserId = maxId + 1;
             _db.UserNameRates.Add(userNameRate);
             _db.SaveChanges();
         }
 
-        public bool UpdateRating(UserNameRate userNameRate)
+        public bool UpdateRating(int userId, string nConst, UserNameRate userNameRate)
         {
-            var dbUserNameRate = GetRating(userNameRate.UserId);
+            var dbUserNameRate = GetRating(userId, nConst);
             if (dbUserNameRate == null)
             {
                 return false;
             }
-
-            dbUserNameRate.UserId = userNameRate.UserId;
-            dbUserNameRate.NameIndividRating = userNameRate.NameIndividRating;
-            dbUserNameRate.Nconst = userNameRate.Nconst;
-            dbUserNameRate.DateTime = userNameRate.DateTime;
+            _db.Remove(dbUserNameRate);
+            _db.Add(userNameRate);
             _db.SaveChanges();
             return true;
         }
         
-        public bool DeleteRating(int userId)
+        public bool DeleteRating(int userId, string nConst)
         {
-            var dbUserNameRate = GetRating(userId);
+            var dbUserNameRate = GetRating(userId, nConst);
             if (dbUserNameRate == null)
             {
                 return false;

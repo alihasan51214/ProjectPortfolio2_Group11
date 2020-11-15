@@ -5,7 +5,6 @@ namespace DataServiceLib.DBObjects
 {
     public class TitleBasicsDTO
     {
-
         public string PrimaryTitle { get; set; }
     
     }

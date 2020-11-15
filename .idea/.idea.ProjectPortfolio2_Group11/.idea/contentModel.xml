@@ -22,8 +22,10 @@
           <e p="Directors.cs" t="Include" />
           <e p="NameBasics.cs" t="Include" />
           <e p="SearchHistory.cs" t="Include" />
+          <e p="SearchResults.cs" t="Include" />
           <e p="TitleAkas.cs" t="Include" />
           <e p="TitleBasics.cs" t="Include" />
+          <e p="TitleBasicsDTO.cs" t="Include" />
           <e p="TitleEpisode.cs" t="Include" />
           <e p="TitleGenres.cs" t="Include" />
           <e p="TitlePrincipals.cs" t="Include" />
@@ -38,6 +40,7 @@
           <e p="IRatingDataService.cs" t="Include" />
           <e p="ISearchDataService.cs" t="Include" />
           <e p="IUsersDataService.cs" t="Include" />
+          <e p="TitleBasicsDTO.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -61,13 +64,17 @@
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
+          <e p="BasicsDTO.cs" t="Include" />
           <e p="BookmarkPersonDTO.cs" t="Include" />
           <e p="BookmarkPersonForCreationDto.cs" t="Include" />
           <e p="MappingProfile" t="Include">
             <e p="BookmarkPersonProfile.cs" t="Include" />
+            <e p="SearchHistoryProfile.cs" t="Include" />
+            <e p="TitleBasicsProfile.cs" t="Include" />
             <e p="UserNameRateProfile.cs" t="Include" />
             <e p="UsersProfile.cs" t="Include" />
           </e>
+          <e p="SearchHistoryDto.cs" t="Include" />
           <e p="UserNameRateDTO.cs" t="Include" />
           <e p="UserNameRateForCreationDto.cs" t="Include" />
           <e p="UsersDTO.cs" t="Include" />

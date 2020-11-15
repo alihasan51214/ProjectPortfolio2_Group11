@@ -6,8 +6,8 @@ namespace DataServiceLib.IDataService
     {
         Users GetUser(int userId);
         void CreateUser(Users user);
+        bool UpdateUser(int userId, Users user);
         bool DeleteUser(int userId);
-        bool UpdateUser(Users user);
         bool Login();
         bool Logout();
     }

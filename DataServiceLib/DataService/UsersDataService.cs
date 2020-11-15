@@ -13,7 +13,7 @@ namespace DataServiceLib.DataService
         {
             _db = new Raw11Context(connStr);
         }
-        
+
         public Users GetUser(int userId)
         {
             return _db.Users.FirstOrDefault(x => x.UserId == userId);
@@ -27,14 +27,13 @@ namespace DataServiceLib.DataService
             _db.SaveChanges();
         }
 
-        public bool UpdateUser(Users user)
+        public bool UpdateUser(int userId, Users user)
         {
-            var dbUser = GetUser(user.UserId);
+            var dbUser = GetUser(userId);
             if (dbUser == null)
             {
                 return false;
             }
-            dbUser.UserId = user.UserId;
             dbUser.Name = user.Name;
             dbUser.Age = user.Age;
             dbUser.Language = user.Language;

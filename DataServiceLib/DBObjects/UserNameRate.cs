@@ -7,7 +7,7 @@ namespace DataServiceLib.DBObjects
     {
         public int UserId { get; set; }
         public int NameIndividRating { get; set; }
-        public string Nconst { get; set; }
+        public string NConst { get; set; }
         public DateTime DateTime { get; set; }
     }
 }
