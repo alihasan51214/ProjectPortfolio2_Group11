@@ -128,7 +128,7 @@ namespace DataServiceLib
             modelBuilder.Entity<UserNameRate>().Property(x => x.UserId).HasColumnName("userid");
             modelBuilder.Entity<UserNameRate>().Property(x => x.NameIndividRating).HasColumnName("name_individrating");
             modelBuilder.Entity<UserNameRate>().Property(x => x.Nconst).HasColumnName("nconst");
-            modelBuilder.Entity<UserNameRate>().Property(x => x.DateTime).HasColumnName("username_date");
+            modelBuilder.Entity<UserNameRate>().Property(x => x.DateTime).HasColumnName("usernamerate_date");
             modelBuilder.Entity<UserNameRate>().HasNoKey();
 
             modelBuilder.Entity<Users>().ToTable("users");

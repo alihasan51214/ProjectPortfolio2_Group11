@@ -15,7 +15,7 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<UserNameRate> GetRatingList()
+        public IList<UserNameRate> GetRatingList(int userId)
         {
             return _db.UserNameRates.ToList();
         }
