@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {}
+    "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
+    "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
         "projectName": "DataServiceLib",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {
+    "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
         "projectName": "WebService",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\WebService\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\WebService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -99,8 +99,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Latest working project\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
+              "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\oool\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
               }
             }
           }
