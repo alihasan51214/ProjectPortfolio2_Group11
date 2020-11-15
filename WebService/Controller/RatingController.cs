@@ -20,37 +20,21 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
         
-        
-        [HttpGet]
-        public IActionResult GetRatingList()
+      
+
+        [HttpPost("{userid}")]
+        public IActionResult CreateRating(UserTitleRate usertitleatedto)
         {
-            var userNameRates = _dataService.RatingDS.GetRatingList();
-            return Ok(_mapper.Map<IEnumerable<UserNameRateDto>>(userNameRates));
-        }
         
-        
-        [HttpGet("{id}")]
-        public IActionResult GetRating(int userId)
-        {
-            var userNameRates = _dataService.RatingDS.GetRating(userId);
-            if (userNameRates == null)
-            {
-                return NotFound();
-            }
-            return Ok(_mapper.Map<BookmarkPersonDto>(userNameRates));
+        // var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
+        var usernamerate=  _dataService.RatingDS.CreateRating(usertitleatedto.UserId, usertitleatedto.Tconst, usertitleatedto.TitleIndividRating);
+            return Ok(usernamerate);
         }
 
-        
-        [HttpPost]
-        public IActionResult CreateBookmark(UserNameRateForCreationDto userNameRateForCreationDto)
-        {
-            var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
-            _dataService.RatingDS.CreateRating(userNameRate);
-            return Created("", userNameRate);
-        }
 
+      
         
-        [HttpPut("{id}")]
+       /* [HttpPut("{id}")]
         public IActionResult UpdateRating(int userid)
         {
             var userNameRate = _mapper.Map<UserNameRate>(userid);
@@ -59,10 +43,10 @@ namespace ProjectPortfolio2_Group11.Controller
                 return NotFound();
             }
             return NoContent();
-        }
+        } */
         
         
-        [HttpDelete("{id}")]
+      /*  [HttpDelete("{id}")]
         public IActionResult DeleteRating(int userId)
         {
             var response = " rating not found";
@@ -72,6 +56,6 @@ namespace ProjectPortfolio2_Group11.Controller
             }
             response = " rating deleted succesfully";
             return CreatedAtRoute(null, userId + response);
-        }
+        } */
     }
 }

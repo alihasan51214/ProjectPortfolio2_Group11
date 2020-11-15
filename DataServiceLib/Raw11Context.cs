@@ -22,8 +22,10 @@ namespace DataServiceLib
         public DbSet<NameBasics> NameBasics { get; set; }
         public DbSet<SearchHistory> SearchHistory { get; set; }
         public DbSet<TitleAkas> TitleAkas { get; set; }
-        public virtual DbSet<TitleBasics> TitleBasics { get; set; }
 
+        public DbSet<RatingTable> RatingTable { get; set; }
+        public virtual DbSet<TitleBasics> TitleBasics { get; set; }
+         
         public virtual DbSet<TitleBasicsDTO> TitleBasicsDTO { get; set; }
 
         //  public virtual DbSet<SearchResults> SearchResults { get; set; }
@@ -74,6 +76,12 @@ namespace DataServiceLib
             modelBuilder.Entity<NameBasics>().Property(x => x.BirthYear).HasColumnName("birthyear");
             modelBuilder.Entity<NameBasics>().Property(x => x.DeathYear).HasColumnName("deathyear");
             modelBuilder.Entity<NameBasics>().HasKey(x => x.Nconst);
+
+            modelBuilder.Entity<RatingTable>().Property(x => x.Tconst).HasColumnName("tconst");
+            modelBuilder.Entity<RatingTable>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
+            modelBuilder.Entity<RatingTable>().Property(x => x.NumVotes).HasColumnName("numvotes");
+            modelBuilder.Entity<RatingTable>().Property(x => x.AvarageRating).HasColumnName("averagerating");
+            modelBuilder.Entity<RatingTable>().HasNoKey();
 
             modelBuilder.Entity<SearchHistory>().ToTable("search_history");
             modelBuilder.Entity<SearchHistory>().HasNoKey();

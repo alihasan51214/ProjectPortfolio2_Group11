@@ -41,9 +41,9 @@ namespace ProjectPortfolio2_Group11.Controller
         {
             var search = _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
 
-            // var response = " search created succesfully";
+    
             return Ok(search);
-            //  return CreatedAtRoute(null,search);
+            
         }
 
       /*  private BasicsDTO CreateMovieDto(BasicsDTO movie)

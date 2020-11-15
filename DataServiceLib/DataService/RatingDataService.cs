@@ -4,6 +4,9 @@ using System.Linq;
 using DataServiceLib.DBObjects;
 using DataServiceLib.IDataService;
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+
 namespace DataServiceLib.DataService
 {
     public class RatingDataService : IRatingDataService
@@ -15,25 +18,25 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<UserNameRate> GetRatingList()
+        public IList<UserNameRate> GetRatingList(int userid)
         {
-            return _db.UserNameRates.ToList();
+            return _db.UserNameRates.Where(x => x.UserId == userid).ToList();
         }
+         
+        public IList<RatingTable> CreateRating(int userid, string tconst, int rate)
+        {
+              
+       var queery = _db.RatingTable.FromSqlInterpolated($"select * from rate({userid},{tconst},{rate})");
 
-        public UserNameRate GetRating(int userId)
-        {
-            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userId); 
-        }
-        
-        public void CreateRating(UserNameRate userNameRate)
-        {
-            var maxId = _db.UserNameRates.Max(x => x.UserId);
-            userNameRate.UserId = maxId + 1;
-            _db.UserNameRates.Add(userNameRate);
+            //var queery = _db.TitleBasics.FromSqlInterpolated($"select * from string_search({userId},{searchInput})");
+
             _db.SaveChanges();
+            return queery
+                .ToList();
+             
         }
-
-        public bool UpdateRating(UserNameRate userNameRate)
+           
+       /* public bool UpdateRating(UserNameRate userNameRate)
         {
             var dbUserNameRate = GetRating(userNameRate.UserId);
             if (dbUserNameRate == null)
@@ -59,6 +62,6 @@ namespace DataServiceLib.DataService
             _db.UserNameRates.Remove(dbUserNameRate);
             _db.SaveChanges();
             return true;
-        }
+        } */
     }
 }
