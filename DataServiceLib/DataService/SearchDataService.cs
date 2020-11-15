@@ -25,12 +25,12 @@ namespace DataServiceLib.DataService
             ;
         }
 
-        public IList<TitleBasics> AddToSearchHistory(int userId, string searchInput)
+        public IList<TitleBasicsDTO> AddToSearchHistory(int userId, string searchInput)
         {
 
 
 
-            var queery = _db.TitleBasics.FromSqlInterpolated($"select primarytitle from string_search({userId},{searchInput})");
+            var queery = _db.TitleBasicsDTO.FromSqlInterpolated($"select primarytitle from string_search({userId},{searchInput})");
 
             //var queery = _db.TitleBasics.FromSqlInterpolated($"select * from string_search({userId},{searchInput})");
 

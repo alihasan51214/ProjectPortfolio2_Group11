@@ -24,7 +24,9 @@ namespace DataServiceLib
         public DbSet<TitleAkas> TitleAkas { get; set; }
         public virtual DbSet<TitleBasics> TitleBasics { get; set; }
 
-      //  public virtual DbSet<SearchResults> SearchResults { get; set; }
+        public virtual DbSet<TitleBasicsDTO> TitleBasicsDTO { get; set; }
+
+        //  public virtual DbSet<SearchResults> SearchResults { get; set; }
 
         public DbSet<TitlePrincipals> TitlePrincipals { get; set; }
         public DbSet<UserNameRate> UserNameRates { get; set; }
@@ -95,7 +97,9 @@ namespace DataServiceLib
             modelBuilder.Entity<TitleAkas>().HasKey(c => new { c.TitleID, c.Ordering });
 
 
-       
+          //  modelBuilder.Entity<TitleBasicsDTO>().ToTable("title_basicsnew");
+            modelBuilder.Entity<TitleBasicsDTO>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
+             modelBuilder.Entity<TitleBasicsDTO>().HasNoKey();
 
             modelBuilder.Entity<TitleBasics>().ToTable("title_basicsnew");
              modelBuilder.Entity<TitleBasics>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");

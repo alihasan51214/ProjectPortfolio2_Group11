@@ -7,7 +7,7 @@ namespace ProjectPortfolio2_Group11.Model.MappingProfile
     {
         public TitleBasicsProfile()
         {
-            CreateMap<TitleBasics, TitleBasicsDTO>();
+            CreateMap<TitleBasics, BasicsDTO>();
             
         }
     }

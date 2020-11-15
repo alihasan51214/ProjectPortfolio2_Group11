@@ -39,10 +39,20 @@ namespace ProjectPortfolio2_Group11.Controller
 
         public IActionResult AddToSearchHistory(SearchHistoryDTO searchDTO)
         {
-            _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
+            var search = _dataService.SearchDS.AddToSearchHistory(searchDTO.UserId, searchDTO.SearchInput);
 
-            var response = " search created succesfully";
-            return CreatedAtRoute(null, response);
+            // var response = " search created succesfully";
+            return Ok(search);
+            //  return CreatedAtRoute(null,search);
+        }
+
+      /*  private BasicsDTO CreateMovieDto(BasicsDTO movie)
+        {
+            return new BasicsDTO
+            {
+                Url = Url.Link(nameof(GetMovie), new { movieId = movie.Id }),
+                Title = movie.Title,
+                Type = movie.Type
+            }; */
         }
     }
-}
