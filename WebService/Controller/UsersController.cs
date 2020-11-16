@@ -11,19 +11,19 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        private readonly DataServiceFacade _dataService;
+        private readonly DataServiceFacade _dataServiceFacade;
         private readonly IMapper _mapper;
 
-        public UsersController(DataServiceFacade dataService, IMapper mapper)
+        public UsersController(DataServiceFacade dataServiceFacade, IMapper mapper)
         {
-            _dataService = dataService;
+            _dataServiceFacade = dataServiceFacade;
             _mapper = mapper;
         }
 
         [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
         {
-            var user = _dataService.UsersDs.GetUser(userId);
+            var user = _dataServiceFacade.UsersDs.GetUser(userId);
             if (user == null)
             {
                 return NotFound();
@@ -35,7 +35,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
-            _dataService.UsersDs.CreateUser(user);
+            _dataServiceFacade.UsersDs.CreateUser(user);
             return Created("", user);
         }
         
@@ -43,7 +43,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult UpdateUser(int userId, UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
-            if (_dataService.UsersDs.UpdateUser(userId, user))
+            if (_dataServiceFacade.UsersDs.UpdateUser(userId, user))
             {
                 return NotFound();
             }
@@ -54,7 +54,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult DeleteUser(int userId)
         {
             var response = " user not found";
-            if (!_dataService.UsersDs.DeleteUser(userId))
+            if (!_dataServiceFacade.UsersDs.DeleteUser(userId))
             {
                 return NotFound(response);
             }

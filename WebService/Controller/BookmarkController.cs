@@ -12,49 +12,48 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/bookmark")]
     public class BookmarkController : ControllerBase
     {
-        private readonly DataServiceFacade _dataService;
+        private readonly DataServiceFacade _dataServiceFacade;
         private readonly IMapper _mapper;
-        public BookmarkController(DataServiceFacade dataService, IMapper mapper)
+        public BookmarkController(DataServiceFacade dataServiceFacade, IMapper mapper)
         {
-            _dataService = dataService;
+            _dataServiceFacade = dataServiceFacade;
             _mapper = mapper;
         }
 
-        [HttpGet("{userId}/{nConst}")]
-        public IActionResult GetBookMark(int userId,string nConst)
+        [HttpGet]
+        public IActionResult GetBookmarks()
         {
-            var bookmark = _dataService.BookmarkingDs.GetBookMark(userId,nConst);
+            var bookmarkPersons = _dataServiceFacade.BookmarkingDs.GetBookmarks();
+            return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmarkPersons));
+        }
+
+        [HttpGet("{userId}/{nConst}")]
+        public IActionResult GetBookmark(int userId,string nConst)
+        {
+            var bookmark = _dataServiceFacade.BookmarkingDs.GetBookMark(userId,nConst);
             if (bookmark == null)
             {
                 return NotFound();
             }
             return Ok(_mapper.Map<BookmarkPersonDto>(bookmark));
         }
-        
+
         [HttpPost("{userId}")]
-        public IActionResult CreateBookmark(BookmarkPersonForCreationDto bookmarkPersonForCreationDto)
-        {
-            var bookmark = _mapper.Map<BookmarkPerson>(bookmarkPersonForCreationDto);
-            _dataService.BookmarkingDs.CreateBookmark(bookmark);
-            return Created("", bookmark);
-        }
-        
-        [HttpPut("{userId}/{nConst}")]
-        public IActionResult UpdateBookmark(int userId, string nConst, BookmarkPersonForCreationDto bookmarkPersonForCreationDtoDto)
+        public IActionResult UpdateBookmark(BookmarkPersonForCreationDto bookmarkPersonForCreationDtoDto)
         {
             var bookmark = _mapper.Map<BookmarkPerson>(bookmarkPersonForCreationDtoDto);
-            if (_dataService.BookmarkingDs.UpdateBookmark(userId, nConst, bookmark))
+            if (!_dataServiceFacade.BookmarkingDs.CreateBookmark(bookmark))
             {
                 return NotFound();
             }
-            return NoContent();
+            return Created("", bookmark);
         }
         
         [HttpDelete("{userId}/{nConst}")]
         public IActionResult DeleteBookmark(int userId,string nConst)
         {
             var response = " bookmark not found";
-            if (!_dataService.BookmarkingDs.DeleteBookmark(userId,nConst))
+            if (!_dataServiceFacade.BookmarkingDs.DeleteBookmark(userId,nConst))
             {
                 return NotFound(response);
             }

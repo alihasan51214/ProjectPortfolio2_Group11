@@ -11,19 +11,19 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/Search")]
     public class SearchController : ControllerBase
     {
-        private readonly DataServiceFacade _dataService;
+        private readonly DataServiceFacade _dataServiceFacade;
         private readonly IMapper _mapper;
 
-        public SearchController(DataServiceFacade dataService, IMapper mapper)
+        public SearchController(DataServiceFacade dataServiceFacade, IMapper mapper)
         {
-            _dataService = dataService;
+            _dataServiceFacade = dataServiceFacade;
             _mapper = mapper;
         }
         
         [HttpGet("{userId}")]
         public IActionResult GetSearchHistory(int userId)
         {
-            var search = _dataService.SearchDs.GetSearchHistory(userId);
+            var search = _dataServiceFacade.SearchDs.GetSearchHistory(userId);
             if (search == null)
             {
                 return NotFound();
@@ -34,7 +34,7 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpPost("{userId}")]
         public IActionResult AddToSearchHistory(SearchHistoryDto searchDto)
         {
-            var search = _dataService.SearchDs.AddToSearchHistory(searchDto.UserId, searchDto.SearchInput);
+            var search = _dataServiceFacade.SearchDs.AddToSearchHistory(searchDto.UserId, searchDto.SearchInput);
             return Ok(search);
         }
 

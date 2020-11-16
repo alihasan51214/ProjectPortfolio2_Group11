@@ -11,26 +11,26 @@ namespace ProjectPortfolio2_Group11.Controller
     [Route("api/rating")]
     public class RatingController :  ControllerBase
     {
-        private readonly DataServiceFacade _dataService;
+        private readonly DataServiceFacade _dataServiceFacade;
         private readonly IMapper _mapper;
 
-        public RatingController(DataServiceFacade dataService, IMapper mapper)
+        public RatingController(DataServiceFacade dataServiceFacade, IMapper mapper)
         {
-            _dataService = dataService;
+            _dataServiceFacade = dataServiceFacade;
             _mapper = mapper;
         }
         
         [HttpGet]
         public IActionResult GetRatingList()
         {
-            var userTitleRates = _dataService.RatingDs.GetRatingList();
+            var userTitleRates = _dataServiceFacade.RatingDs.GetRatingList();
             return Ok(_mapper.Map<IEnumerable<UserTitleRateDto>>(userTitleRates));
         }
 
         [HttpGet("{userId}/{tConst}")]
         public IActionResult GetRating(int userId, string tConst)
         {
-            var userTitleRate = _dataService.RatingDs.GetRating(userId, tConst);
+            var userTitleRate = _dataServiceFacade.RatingDs.GetRating(userId, tConst);
             if (userTitleRate == null)
             {
                 return NotFound();
@@ -42,7 +42,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult CreateBookmark(UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
-            _dataService.RatingDs.CreateRating(userTitleRate);
+            _dataServiceFacade.RatingDs.CreateRating(userTitleRate);
             return Ok(userTitleRate);
         }
         
@@ -50,7 +50,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult UpdateRating(int userId, string tConst, UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
-            if (_dataService.RatingDs.UpdateRating(userId, tConst, userTitleRate))
+            if (_dataServiceFacade.RatingDs.UpdateRating(userId, tConst, userTitleRate))
             {
                 return NotFound();
             }
@@ -61,7 +61,7 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult DeleteRating(int userId, string tConst)
         {
             var response = " rating not found";
-            if (!_dataService.RatingDs.DeleteRating(userId, tConst))
+            if (!_dataServiceFacade.RatingDs.DeleteRating(userId, tConst))
             {
                 return NotFound(response);
             }
