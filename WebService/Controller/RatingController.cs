@@ -44,8 +44,9 @@ namespace ProjectPortfolio2_Group11.Controller
         {
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
             if (_dataServiceFacade.RatingDs.CheckRating(userTitleRate))
-            {
-                return NotFound();
+            { 
+                string badrequest = "User has already rated this title";
+                return BadRequest(badrequest);
             }
             _dataServiceFacade.RatingDs.CreateRating(userTitleRate);
             return Ok(_dataServiceFacade.RatingDs.CreateRating(userTitleRate).ToList());
