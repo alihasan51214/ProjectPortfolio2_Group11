@@ -53,7 +53,7 @@ namespace ProjectPortfolio2_Group11.Controller
         }
 
         [HttpPost("{userId}")]
-        public IActionResult UpdateBookmark(BookmarkPersonForCreationDto bookmarkPersonForCreationDtoDto)
+        public IActionResult CreateBookmark(BookmarkPersonForCreationDto bookmarkPersonForCreationDtoDto)
         {
             var response = " This bookmark already exists for this user";
             var bookmark = _mapper.Map<BookmarkPerson>(bookmarkPersonForCreationDtoDto);

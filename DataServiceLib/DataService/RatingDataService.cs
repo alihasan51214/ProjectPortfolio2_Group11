@@ -31,7 +31,7 @@ namespace DataServiceLib.DataService
         public bool CheckRating(UserTitleRate userTitleRate)
         {
             var dbUserTitleRate = GetRating(userTitleRate.UserId, userTitleRate.TConst);
-            if (dbUserTitleRate == null)
+            if (dbUserTitleRate == userTitleRate)
             {
                 return false;
             }
