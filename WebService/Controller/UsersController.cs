@@ -132,7 +132,7 @@ namespace ProjectPortfolio2_Group11.Controller
             var tokenDescription = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("id", user.UserId.ToString()) }),
-                Expires = DateTime.Now.AddSeconds(45),
+                Expires = DateTime.Now.AddSeconds(600),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature)

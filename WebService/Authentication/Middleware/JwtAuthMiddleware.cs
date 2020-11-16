@@ -22,13 +22,13 @@ namespace ProjectPortfolio2_Group11.Authentication.Middleware
     public class JwtAuthMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly DataServiceFacade _dataService;
+        private readonly DataServiceFacade _dataServiceFacade;
         private readonly IConfiguration _configuration;
 
-        public JwtAuthMiddleware(RequestDelegate next, DataServiceFacade dataService, IConfiguration configuration)
+        public JwtAuthMiddleware(RequestDelegate next, DataServiceFacade dataServiceFacade, IConfiguration configuration)
         {
             _next = next;
-            _dataService = dataService;
+            _dataServiceFacade = dataServiceFacade;
             _configuration = configuration;
         }
 
@@ -54,7 +54,7 @@ namespace ProjectPortfolio2_Group11.Authentication.Middleware
                 if (claim != null)
                 {
                     int.TryParse(claim.Value.ToString(), out var id);
-                    context.Items["User"] = _dataService.UsersDs.AuthenticationGetUser(id);
+                    context.Items["User"] = _dataServiceFacade.UsersDs.AuthenticationGetUser(id);
                 }
             }
             catch { }

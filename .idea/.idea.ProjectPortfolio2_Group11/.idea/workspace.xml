@@ -26,12 +26,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Working Project">
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Connected to raw11">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Authentication/Middleware/JwtAuthMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Authentication/Middleware/JwtAuthMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Controller/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +104,6 @@
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/UsersForAuth.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/Users.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IUsersDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controller/UsersController.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/UserData.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IBookmarkingDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/BookmarkingDataService.cs" />
@@ -103,15 +113,16 @@
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IRatingDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/RatingDataService.cs" />
         <option value="$PROJECT_DIR$/WebService/Authentication/Attributes/AuthorizationAttribute.cs" />
-        <option value="$PROJECT_DIR$/WebService/Authentication/Middleware/JwtAuthMiddleware.cs" />
         <option value="$PROJECT_DIR$/WebService/Authentication/Services/PasswordService.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" />
         <option value="$PROJECT_DIR$/WebServiceTests/BookmarkControllerTest.cs" />
-        <option value="$PROJECT_DIR$/WebService/appsettings.json" />
-        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
+        <option value="$PROJECT_DIR$/WebService/appsettings.json" />
+        <option value="$PROJECT_DIR$/WebService/Authentication/Middleware/JwtAuthMiddleware.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/UsersController.cs" />
       </list>
     </option>
   </component>
@@ -258,7 +269,7 @@
       <workItem from="1605537947638" duration="12368000" />
       <workItem from="1605550691142" duration="4476000" />
       <workItem from="1605556253863" duration="236000" />
-      <workItem from="1605557190054" duration="930000" />
+      <workItem from="1605557190054" duration="1740000" />
     </task>
     <task id="LOCAL-00001" summary="Controllers Added">
       <created>1605013594208</created>
@@ -428,7 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605556381649</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added authorization to getsearchHistory">
+      <created>1605558257583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1605558257583</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Connected to raw11">
+      <created>1605558379660</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1605558379660</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +506,9 @@
     <MESSAGE value="authorization attribute added to the methods" />
     <MESSAGE value="Test Added" />
     <MESSAGE value="Working Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Project" />
+    <MESSAGE value="added authorization to getsearchHistory" />
+    <MESSAGE value="Connected to raw11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected to raw11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="418" key="#Firefox_Settings" timestamp="1605211898738">
@@ -508,22 +535,22 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="634" y="222" key="Github.UntrackedFilesDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1604998889638" />
-    <state width="1877" height="228" key="GridCell.Tab.0.bottom" timestamp="1605555444534">
+    <state width="1877" height="228" key="GridCell.Tab.0.bottom" timestamp="1605558734336">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="228" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605555444534" />
-    <state width="1877" height="228" key="GridCell.Tab.0.center" timestamp="1605555444534">
+    <state width="1877" height="228" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605558734336" />
+    <state width="1877" height="228" key="GridCell.Tab.0.center" timestamp="1605558734335">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="228" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605555444534" />
-    <state width="1877" height="228" key="GridCell.Tab.0.left" timestamp="1605555444534">
+    <state width="1877" height="228" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605558734335" />
+    <state width="1877" height="228" key="GridCell.Tab.0.left" timestamp="1605558734335">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="228" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605555444534" />
-    <state width="1877" height="228" key="GridCell.Tab.0.right" timestamp="1605555444534">
+    <state width="1877" height="228" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605558734335" />
+    <state width="1877" height="228" key="GridCell.Tab.0.right" timestamp="1605558734335">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="228" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605555444534" />
+    <state width="1877" height="228" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605558734335" />
     <state width="1877" height="372" key="GridCell.Tab.1.bottom" timestamp="1605550507401">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -620,14 +647,14 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1605539233190" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605556385410">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605558383622">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605556385410" />
-    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605551894492">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605558383622" />
+    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605558367431">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605551894492" />
+    <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605558367431" />
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1605541058827">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
