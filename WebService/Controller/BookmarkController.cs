@@ -30,10 +30,11 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet("{userId}/{nConst}")]
         public IActionResult GetBookmark(int userId,string nConst)
         {
+            var response = " bookmark not found";
             var bookmark = _dataServiceFacade.BookmarkingDs.GetBookMark(userId,nConst);
             if (bookmark == null)
-            {
-                return NotFound();
+            {   
+                return NotFound(response);
             }
             return Ok(_mapper.Map<BookmarkPersonDto>(bookmark));
         }
@@ -41,10 +42,11 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpPost("{userId}")]
         public IActionResult UpdateBookmark(BookmarkPersonForCreationDto bookmarkPersonForCreationDtoDto)
         {
+            var response = " This bookmark already exists for this user";
             var bookmark = _mapper.Map<BookmarkPerson>(bookmarkPersonForCreationDtoDto);
             if (!_dataServiceFacade.BookmarkingDs.CreateBookmark(bookmark))
             {
-                return NotFound();
+                return BadRequest(response);
             }
             return Created("", bookmark);
         }

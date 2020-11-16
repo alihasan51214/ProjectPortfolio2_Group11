@@ -34,7 +34,8 @@ namespace ProjectPortfolio2_Group11.Controller
             var userTitleRate = _dataServiceFacade.RatingDs.GetRating(userId, tConst);
             if (userTitleRate == null)
             {
-                return NotFound();
+                var response = " rating not found";
+                return NotFound(response);
             }
             return Ok(_mapper.Map<UserTitleRateDto>(userTitleRate));
         }
