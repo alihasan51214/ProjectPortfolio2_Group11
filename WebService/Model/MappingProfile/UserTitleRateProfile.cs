@@ -8,6 +8,7 @@ namespace ProjectPortfolio2_Group11.Model.MappingProfile
         public UserTitleRateProfile()
         {
             CreateMap<UserTitleRate, UserTitleRateDto>();
+            CreateMap<TitleBasics, TitleRateDto>();
             CreateMap<UserTitleRateForCreationDto, UserTitleRate>();
         }
     }

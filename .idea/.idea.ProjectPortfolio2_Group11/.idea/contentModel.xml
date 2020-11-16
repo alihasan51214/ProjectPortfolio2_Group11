@@ -30,6 +30,7 @@
           <e p="TitleGenres.cs" t="Include" />
           <e p="TitleNameRate.cs" t="Include" />
           <e p="TitlePrincipals.cs" t="Include" />
+          <e p="TitleRateDto.cs" t="Include" />
           <e p="Users.cs" t="Include" />
           <e p="UserTitleRate.cs" t="Include" />
           <e p="WordSearch.cs" t="Include" />

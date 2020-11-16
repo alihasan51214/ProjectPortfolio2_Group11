@@ -38,25 +38,17 @@ namespace ProjectPortfolio2_Group11.Controller
             return Ok(_mapper.Map<UserTitleRateDto>(userTitleRate));
         }
         
-        [HttpPost]
-        public IActionResult CreateBookmark(UserTitleRateForCreationDto userTitleRateForCreationDto)
+        [HttpPost("{userId}")]
+        public IActionResult CreateRating(UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
-            _dataServiceFacade.RatingDs.CreateRating(userTitleRate);
-            return Ok(userTitleRate);
-        }
-        
-        [HttpPut("{userId}/{tConst}")]
-        public IActionResult UpdateRating(int userId, string tConst, UserTitleRateForCreationDto userTitleRateForCreationDto)
-        {
-            var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
-            if (_dataServiceFacade.RatingDs.UpdateRating(userId, tConst, userTitleRate))
+            if (_dataServiceFacade.RatingDs.CheckRating(userTitleRate))
             {
-                return NotFound();
+                return NoContent();
             }
-            return NoContent();
+            return NotFound();
         }
-        
+
         [HttpDelete("{userId}/{tConst}")]
         public IActionResult DeleteRating(int userId, string tConst)
         {

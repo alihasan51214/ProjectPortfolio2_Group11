@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using DataServiceLib.DBObjects;
 using DataServiceLib.IDataService;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataServiceLib.DataService
 {
@@ -26,25 +28,25 @@ namespace DataServiceLib.DataService
                                                          && x.TConst == tConst); 
         }
         
-        public void CreateRating(UserTitleRate userTitleRate)
+        public bool CheckRating(UserTitleRate userTitleRate)
         {
-            //var queery = _db..FromSqlInterpolated($"select * from rate({userid},{tconst},{rate})");
-            _db.UserTitleRates.Add(userTitleRate);
-            _db.SaveChanges();
-        }
-
-        public bool UpdateRating(int userId, string tConst, UserTitleRate userTitleRate)
-        {
-            var dbUserNameRate = GetRating(userId, tConst);
-            if (dbUserNameRate == userTitleRate)
+            var dbUserTitleRate = GetRating(userTitleRate.UserId, userTitleRate.TConst);
+            if (dbUserTitleRate == null)
             {
-                return false;
+                CreateRating(userTitleRate);
+                return true;
             }
-            _db.Add(userTitleRate);
-            _db.SaveChanges();
-            return true;
+            return false;
         }
         
+        public IList<TitleRateDto> CreateRating(UserTitleRate userTitleRate)
+        {
+            var queery = _db.RatingTable.FromSqlInterpolated($"select * from rate({userTitleRate.UserId},{userTitleRate.TConst},{userTitleRate.TitleIndividRating})");
+            _db.SaveChanges();
+            return queery
+                .ToList();
+        }
+
         public bool DeleteRating(int userId, string tConst)
         {
             var dbUserTitleRate = GetRating(userId, tConst);
