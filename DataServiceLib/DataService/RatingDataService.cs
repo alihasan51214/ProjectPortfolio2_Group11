@@ -15,44 +15,44 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
         
-        public IList<UserNameRate> GetRatingList()
+        public IList<UserTitleRate> GetRatingList()
         {
-            return _db.UserNameRates.ToList();
+            return _db.UserTitleRates.ToList();
         }
         
-        public UserNameRate GetRating(int userId, string nConst)
+        public UserTitleRate GetRating(int userId, string tConst)
         {
-            return _db.UserNameRates.FirstOrDefault(x => x.UserId == userId
-                                                         && x.NConst == nConst); 
+            return _db.UserTitleRates.FirstOrDefault(x => x.UserId == userId
+                                                         && x.TConst == tConst); 
         }
         
-        public void CreateRating(UserNameRate userNameRate)
+        public void CreateRating(UserTitleRate userTitleRate)
         {
-            _db.UserNameRates.Add(userNameRate);
+            //var queery = _db..FromSqlInterpolated($"select * from rate({userid},{tconst},{rate})");
+            _db.UserTitleRates.Add(userTitleRate);
             _db.SaveChanges();
         }
 
-        public bool UpdateRating(int userId, string nConst, UserNameRate userNameRate)
+        public bool UpdateRating(int userId, string tConst, UserTitleRate userTitleRate)
         {
-            var dbUserNameRate = GetRating(userId, nConst);
-            if (dbUserNameRate == null)
+            var dbUserNameRate = GetRating(userId, tConst);
+            if (dbUserNameRate == userTitleRate)
             {
                 return false;
             }
-            _db.Remove(dbUserNameRate);
-            _db.Add(userNameRate);
+            _db.Add(userTitleRate);
             _db.SaveChanges();
             return true;
         }
         
-        public bool DeleteRating(int userId, string nConst)
+        public bool DeleteRating(int userId, string tConst)
         {
-            var dbUserNameRate = GetRating(userId, nConst);
-            if (dbUserNameRate == null)
+            var dbUserTitleRate = GetRating(userId, tConst);
+            if (dbUserTitleRate == null)
             {
                 return false;
             }
-            _db.UserNameRates.Remove(dbUserNameRate);
+            _db.UserTitleRates.Remove(dbUserTitleRate);
             _db.SaveChanges();
             return true;
         }

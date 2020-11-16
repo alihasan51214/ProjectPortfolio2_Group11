@@ -6,10 +6,10 @@ namespace DataServiceLib.IDataService
 {
     public interface IRatingDataService
     {
-        IList<UserNameRate> GetRatingList();
-        UserNameRate GetRating(int userId, string nConst);
-        void CreateRating(UserNameRate userNameRate);
-        bool UpdateRating(int userId, string nConst, UserNameRate userNameRate);
-        bool DeleteRating(int userId, string nConst);
+        IList<UserTitleRate> GetRatingList();
+        UserTitleRate GetRating(int userId, string tConst);
+        void CreateRating(UserTitleRate userTitleRate);
+        bool UpdateRating(int userId, string tConst, UserTitleRate userTitleRate);
+        bool DeleteRating(int userId, string tConst);
     }
 }

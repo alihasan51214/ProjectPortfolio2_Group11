@@ -28,8 +28,8 @@
           <e p="TitleBasicsDTO.cs" t="Include" />
           <e p="TitleEpisode.cs" t="Include" />
           <e p="TitleGenres.cs" t="Include" />
+          <e p="TitleNameRate.cs" t="Include" />
           <e p="TitlePrincipals.cs" t="Include" />
-          <e p="UserNameRate.cs" t="Include" />
           <e p="Users.cs" t="Include" />
           <e p="UserTitleRate.cs" t="Include" />
           <e p="WordSearch.cs" t="Include" />
@@ -70,14 +70,14 @@
             <e p="BookmarkPersonProfile.cs" t="Include" />
             <e p="SearchHistoryProfile.cs" t="Include" />
             <e p="TitleBasicsProfile.cs" t="Include" />
-            <e p="UserNameRateProfile.cs" t="Include" />
             <e p="UsersProfile.cs" t="Include" />
+            <e p="UserTitleRateProfile.cs" t="Include" />
           </e>
           <e p="SearchHistoryDto.cs" t="Include" />
-          <e p="UserNameRateDTO.cs" t="Include" />
-          <e p="UserNameRateForCreationDto.cs" t="Include" />
           <e p="UsersDTO.cs" t="Include" />
           <e p="UsersForCreationDTO.cs" t="Include" />
+          <e p="UserTitleRateDto.cs" t="Include" />
+          <e p="UserTitleRateForCreationDto.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

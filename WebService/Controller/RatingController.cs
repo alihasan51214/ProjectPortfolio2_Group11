@@ -23,45 +23,45 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet]
         public IActionResult GetRatingList()
         {
-            var userNameRates = _dataService.RatingDs.GetRatingList();
-            return Ok(_mapper.Map<IEnumerable<UserNameRateDto>>(userNameRates));
+            var userTitleRates = _dataService.RatingDs.GetRatingList();
+            return Ok(_mapper.Map<IEnumerable<UserTitleRateDto>>(userTitleRates));
         }
 
-        [HttpGet("{userId}/{nConst}")]
-        public IActionResult GetRating(int userId, string nConst)
+        [HttpGet("{userId}/{tConst}")]
+        public IActionResult GetRating(int userId, string tConst)
         {
-            var userNameRates = _dataService.RatingDs.GetRating(userId, nConst);
-            if (userNameRates == null)
+            var userTitleRate = _dataService.RatingDs.GetRating(userId, tConst);
+            if (userTitleRate == null)
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<BookmarkPersonDto>(userNameRates));
+            return Ok(_mapper.Map<UserTitleRateDto>(userTitleRate));
         }
         
         [HttpPost]
-        public IActionResult CreateBookmark(UserNameRateForCreationDto userNameRateForCreationDto)
+        public IActionResult CreateBookmark(UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
-            var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
-            _dataService.RatingDs.CreateRating(userNameRate);
-            return Created("", userNameRate);
+            var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
+            _dataService.RatingDs.CreateRating(userTitleRate);
+            return Ok(userTitleRate);
         }
         
-        [HttpPut("{userId}/{nConst}")]
-        public IActionResult UpdateRating(int userId, string nConst, UserNameRateForCreationDto userNameRateForCreationDto)
+        [HttpPut("{userId}/{tConst}")]
+        public IActionResult UpdateRating(int userId, string tConst, UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
-            var userNameRate = _mapper.Map<UserNameRate>(userNameRateForCreationDto);
-            if (_dataService.RatingDs.UpdateRating(userId, nConst, userNameRate))
+            var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
+            if (_dataService.RatingDs.UpdateRating(userId, tConst, userTitleRate))
             {
                 return NotFound();
             }
             return NoContent();
         }
         
-        [HttpDelete("{userId}/{nConst}")]
-        public IActionResult DeleteRating(int userId, string nConst)
+        [HttpDelete("{userId}/{tConst}")]
+        public IActionResult DeleteRating(int userId, string tConst)
         {
             var response = " rating not found";
-            if (!_dataService.RatingDs.DeleteRating(userId, nConst))
+            if (!_dataService.RatingDs.DeleteRating(userId, tConst))
             {
                 return NotFound(response);
             }

@@ -2,11 +2,11 @@
 
 namespace ProjectPortfolio2_Group11.Model
 {
-    public class UserNameRateDto
+    public class UserTitleRateDto
     {
         public int UserId { get; set; }
-        public int NameIndividRating { get; set; }
-        public string NConst { get; set; }
+        public int TitleIndividRating { get; set; }
+        public string TConst { get; set; }
         public DateTime DateTime { get; set; }
     }
 }
