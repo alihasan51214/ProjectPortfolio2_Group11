@@ -4,6 +4,7 @@ using AutoMapper;
 using DataServiceLib;
 using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
+using ProjectPortfolio2_Group11.Authentication.Attributes;
 using ProjectPortfolio2_Group11.Model;
 
 
@@ -21,6 +22,7 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
 
+        [Authorization]
         [HttpGet]
         public IActionResult GetBookmarks()
         {
