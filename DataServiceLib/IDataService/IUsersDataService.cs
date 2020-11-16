@@ -8,7 +8,10 @@ namespace DataServiceLib.IDataService
         void CreateUser(Users user);
         bool UpdateUser(int userId, Users user);
         bool DeleteUser(int userId);
-        bool Login();
-        bool Logout();
+
+        //For Authentication
+        UsersForAuth AuthenticationGetUser(int userId);
+        UsersForAuth AuthenticationGetUser(string username);
+        UsersForAuth AuthenticationCreateUser(string name, string username, string password = null, string salt = null);
     }
 }

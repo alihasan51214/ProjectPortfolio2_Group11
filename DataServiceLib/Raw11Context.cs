@@ -139,7 +139,7 @@ namespace DataServiceLib
             modelBuilder.Entity<Users>().Property(x => x.Name).HasColumnName("name");
             modelBuilder.Entity<Users>().Property(x => x.Age).HasColumnName("age");
             modelBuilder.Entity<Users>().Property(x => x.Language).HasColumnName("language");
-            modelBuilder.Entity<Users>().Property(x => x.Mail).HasColumnName("mail");
+            modelBuilder.Entity<Users>().Property(x => x.Username).HasColumnName("username");
             modelBuilder.Entity<Users>().HasKey(x => x.UserId);
 
             modelBuilder.Entity<UserTitleRate>().ToTable("user_titlerate");

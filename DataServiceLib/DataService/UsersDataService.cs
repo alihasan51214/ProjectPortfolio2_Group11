@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DataServiceLib.DBObjects;
 using DataServiceLib.IDataService;
@@ -18,7 +19,7 @@ namespace DataServiceLib.DataService
         {
             return _db.Users.FirstOrDefault(x => x.UserId == userId);
         }
-        
+
         public void CreateUser(Users user)
         {
             var maxId = _db.Users.Max(x => x.UserId);
@@ -37,7 +38,7 @@ namespace DataServiceLib.DataService
             dbUser.Name = user.Name;
             dbUser.Age = user.Age;
             dbUser.Language = user.Language;
-            dbUser.Mail = user.Mail;
+            dbUser.Username = user.Username;
             _db.SaveChanges();
             return true;
         }
@@ -53,15 +54,32 @@ namespace DataServiceLib.DataService
             _db.SaveChanges();
             return true;
         }
+        
+        //For Authentication
+        private List<UsersForAuth> _usersListForAuth = UserData.Users;
 
-        public bool Login()
+        public UsersForAuth AuthenticationGetUser(int userId)
         {
-            throw new NotImplementedException();
+            return _usersListForAuth.FirstOrDefault(x => x.UserId == userId);
         }
-
-        public bool Logout()
+        
+        public UsersForAuth AuthenticationGetUser(string username)
         {
-            throw new NotImplementedException();
+            return _usersListForAuth.FirstOrDefault(x => x.Username == username);
+        }
+        
+        public UsersForAuth AuthenticationCreateUser(string name, string username, string password = null, string salt = null)
+        {
+            var user = new UsersForAuth()
+            {
+                UserId = _usersListForAuth.Max(x => x.UserId) + 1,
+                Name = name,
+                Username = username,
+                Password = password,
+                Salt = salt
+            };
+            _usersListForAuth.Add(user);
+            return user;
         }
     }
 }

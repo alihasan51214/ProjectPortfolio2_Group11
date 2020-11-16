@@ -32,6 +32,7 @@
           <e p="TitlePrincipals.cs" t="Include" />
           <e p="TitleRateDto.cs" t="Include" />
           <e p="Users.cs" t="Include" />
+          <e p="UsersForAuth.cs" t="Include" />
           <e p="UserTitleRate.cs" t="Include" />
           <e p="WordSearch.cs" t="Include" />
           <e p="Writer.cs" t="Include" />
@@ -50,12 +51,16 @@
           </e>
         </e>
         <e p="Raw11Context.cs" t="Include" />
+        <e p="UserData.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="ProjectPortfolio2_Group11.sln" t="IncludeFlat" />
       <e p="WebService" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
+        <e p="Attributes" t="Include">
+          <e p="AuthorizationAttribute.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controller" t="Include">
           <e p="BookmarkController.cs" t="Include" />
@@ -63,10 +68,14 @@
           <e p="SearchController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
+        <e p="Middleware" t="Include">
+          <e p="JwtAuthMiddleware.cs" t="Include" />
+        </e>
         <e p="Model" t="Include">
           <e p="BasicsDTO.cs" t="Include" />
           <e p="BookmarkPersonDTO.cs" t="Include" />
           <e p="BookmarkPersonForCreationDto.cs" t="Include" />
+          <e p="LoginDto.cs" t="Include" />
           <e p="MappingProfile" t="Include">
             <e p="BookmarkPersonProfile.cs" t="Include" />
             <e p="SearchHistoryProfile.cs" t="Include" />
@@ -74,6 +83,7 @@
             <e p="UsersProfile.cs" t="Include" />
             <e p="UserTitleRateProfile.cs" t="Include" />
           </e>
+          <e p="RegisterDto.cs" t="Include" />
           <e p="SearchHistoryDto.cs" t="Include" />
           <e p="UsersDTO.cs" t="Include" />
           <e p="UsersForCreationDTO.cs" t="Include" />
@@ -90,6 +100,9 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="PasswordService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="WebService.csproj" t="IncludeRecursive" />

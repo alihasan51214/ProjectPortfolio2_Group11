@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using DataServiceLib;
 using DataServiceLib.DBObjects;
@@ -23,8 +24,17 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet]
         public IActionResult GetBookmarks()
         {
-            var bookmarkPersons = _dataServiceFacade.BookmarkingDs.GetBookmarks();
-            return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmarkPersons));
+            try
+            {
+                var user = Request.HttpContext.Items["User"] as UsersForAuth;
+                var bookmarkPersons = _dataServiceFacade.BookmarkingDs.GetBookmarks(user.UserId);
+                return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmarkPersons));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return Unauthorized();
+            }
         }
 
         [HttpGet("{userId}/{nConst}")]

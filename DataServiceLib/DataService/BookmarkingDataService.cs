@@ -14,7 +14,7 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
 
-        public IList<BookmarkPerson> GetBookmarks()
+        public IList<BookmarkPerson> GetBookmarks(int userId)
         {
             return _db.BookmarkPerson.ToList();
         }
