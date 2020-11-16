@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace ProjectPortfolio2_Group11.Services
+namespace ProjectPortfolio2_Group11.Authentication.Services
 {
     public class PasswordService
     {

@@ -8,8 +8,8 @@ using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ProjectPortfolio2_Group11.Authentication.Services;
 using ProjectPortfolio2_Group11.Model;
-using ProjectPortfolio2_Group11.Services;
 
 
 namespace ProjectPortfolio2_Group11.Controller

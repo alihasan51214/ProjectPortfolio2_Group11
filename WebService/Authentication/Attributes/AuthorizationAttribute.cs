@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace ProjectPortfolio2_Group11.Attributes
+namespace ProjectPortfolio2_Group11.Authentication.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class AuthorizationAttribute : Attribute, IAuthorizationFilter

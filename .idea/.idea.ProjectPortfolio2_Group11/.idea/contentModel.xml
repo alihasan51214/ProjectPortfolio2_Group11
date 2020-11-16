@@ -58,8 +58,16 @@
       <e p="WebService" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
-        <e p="Attributes" t="Include">
-          <e p="AuthorizationAttribute.cs" t="Include" />
+        <e p="Authentication" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="AuthorizationAttribute.cs" t="Include" />
+          </e>
+          <e p="Middleware" t="Include">
+            <e p="JwtAuthMiddleware.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="PasswordService.cs" t="Include" />
+          </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controller" t="Include">
@@ -67,9 +75,6 @@
           <e p="RatingController.cs" t="Include" />
           <e p="SearchController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
-        </e>
-        <e p="Middleware" t="Include">
-          <e p="JwtAuthMiddleware.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
           <e p="BasicsDTO.cs" t="Include" />
@@ -100,9 +105,6 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
-        </e>
-        <e p="Services" t="Include">
-          <e p="PasswordService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="WebService.csproj" t="IncludeRecursive" />

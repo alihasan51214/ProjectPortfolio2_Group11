@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ProjectPortfolio2_Group11.Middleware
+namespace ProjectPortfolio2_Group11.Authentication.Middleware
 {
     public static class JwtAuthMiddlewareExtension
     {

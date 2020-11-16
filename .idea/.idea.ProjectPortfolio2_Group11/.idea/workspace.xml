@@ -26,9 +26,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Authentication Added, minor changes still needed">
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Authentication Added to GetBookmarks method and to GetRatingList method. Everything is up and running only testing left to be added">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/obj/Debug/netcoreapp3.1/WebService.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,9 +84,6 @@
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/RatingTable.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleRateDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/UserTitleRateProfile.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IRatingDataService.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/DataService/RatingDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
         <option value="$PROJECT_DIR$/Authentication/Controllers/MoviesController.cs" />
         <option value="$PROJECT_DIR$/Authentication/Controllers/RatingController.cs" />
         <option value="$PROJECT_DIR$/WebService/Services/PasswordService.cs" />
@@ -110,6 +106,9 @@
         <option value="$PROJECT_DIR$/WebService/Attributes/AuthorizationAttribute.cs" />
         <option value="$PROJECT_DIR$/WebService/Middleware/JwtAuthMiddleware.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/UsersDataService.cs" />
+        <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/IDataService/IRatingDataService.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DataService/RatingDataService.cs" />
       </list>
     </option>
   </component>
@@ -135,7 +134,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.ProjectPortfolio2_Group11">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebService: IIS Express">
     <configuration name="Authentication" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Authentication/Authentication.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -196,12 +195,33 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="WebService: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebService/WebService.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue=".NET Launch Settings Profile.ProjectPortfolio2_Group11" />
       <item itemvalue=".NET Launch Settings Profile.ProjectPortfolio2_Group11: IIS Express" />
       <item itemvalue=".NET Launch Settings Profile.Authentication: IIS Express" />
       <item itemvalue=".NET Launch Settings Profile.Authentication" />
+      <item itemvalue=".NET Launch Settings Profile.WebService: IIS Express" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Launch Settings Profile.WebService: IIS Express" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -231,7 +251,7 @@
       <workItem from="1605478563117" duration="18739000" />
       <workItem from="1605503532225" duration="2710000" />
       <workItem from="1605522831560" duration="7908000" />
-      <workItem from="1605537947638" duration="10299000" />
+      <workItem from="1605537947638" duration="11204000" />
     </task>
     <task id="LOCAL-00001" summary="Controllers Added">
       <created>1605013594208</created>
@@ -352,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605546620917</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Authentication Added to GetBookmarks method and to GetRatingList method. Everything is up and running only testing left to be added">
+      <created>1605548601548</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605548601548</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +426,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="DataServiceLayer Done&#10;WebserviceLater Done" />
     <MESSAGE value="Authentication Added, minor changes still needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authentication Added, minor changes still needed" />
+    <MESSAGE value="Authentication Added to GetBookmarks method and to GetRatingList method. Everything is up and running only testing left to be added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication Added to GetBookmarks method and to GetRatingList method. Everything is up and running only testing left to be added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="418" key="#Firefox_Settings" timestamp="1605211898738">
@@ -538,10 +566,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1605539233190" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605546720482">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605548607301">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605546720482" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605548607301" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605537250958">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ProjectPortfolio2_Group11.Middleware;
+using ProjectPortfolio2_Group11.Authentication.Middleware;
 
 namespace ProjectPortfolio2_Group11
 {
