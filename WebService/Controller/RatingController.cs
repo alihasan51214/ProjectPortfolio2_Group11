@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using DataServiceLib;
 using DataServiceLib.DBObjects;
@@ -44,9 +45,10 @@ namespace ProjectPortfolio2_Group11.Controller
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
             if (_dataServiceFacade.RatingDs.CheckRating(userTitleRate))
             {
-                return NoContent();
+                return NotFound();
             }
-            return NotFound();
+            _dataServiceFacade.RatingDs.CreateRating(userTitleRate);
+            return Ok(_dataServiceFacade.RatingDs.CreateRating(userTitleRate).ToList());
         }
 
         [HttpDelete("{userId}/{tConst}")]

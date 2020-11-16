@@ -33,10 +33,9 @@ namespace DataServiceLib.DataService
             var dbUserTitleRate = GetRating(userTitleRate.UserId, userTitleRate.TConst);
             if (dbUserTitleRate == null)
             {
-                CreateRating(userTitleRate);
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
         
         public IList<TitleRateDto> CreateRating(UserTitleRate userTitleRate)
