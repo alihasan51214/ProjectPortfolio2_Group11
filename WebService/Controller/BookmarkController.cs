@@ -20,12 +20,7 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult GetBookmarks()
-        {
-            var bookmarkPersons = _dataServiceFacade.BookmarkingDs.GetBookmarks();
-            return Ok(_mapper.Map<IEnumerable<BookmarkPersonDto>>(bookmarkPersons));
-        }
+      
 
         [HttpGet("{userId}/{nConst}")]
         public IActionResult GetBookmark(int userId,string nConst)
