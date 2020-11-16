@@ -1,8 +1,6 @@
-﻿
-using System;
+﻿using System;
 using AutoMapper;
 using DataServiceLib;
-using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
 using ProjectPortfolio2_Group11.Model;
 

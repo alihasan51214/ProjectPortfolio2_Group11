@@ -25,16 +25,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="...">
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Paging Added">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/obj/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebService/Model/BasicsDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Model/BasicsDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/DataServiceLib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/bin/Debug/netcoreapp3.1/WebService.dll" afterDir="false" />
@@ -114,11 +112,11 @@
         <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/UsersController.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/BookmarkPersonProfile.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/TitleBasicsProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/BasicsDto.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/Raw11Context.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
       </list>
     </option>
@@ -206,7 +204,8 @@
       <workItem from="1605266590491" duration="28806000" />
       <workItem from="1605337586686" duration="2160000" />
       <workItem from="1605469870095" duration="6199000" />
-      <workItem from="1605478563117" duration="18392000" />
+      <workItem from="1605478563117" duration="18739000" />
+      <workItem from="1605503532225" duration="1159000" />
     </task>
     <task id="LOCAL-00001" summary="Controllers Added">
       <created>1605013594208</created>
@@ -299,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605492405099</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Paging Added">
+      <created>1605501675787</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605501675787</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +338,8 @@
     <MESSAGE value="." />
     <MESSAGE value="fixes" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Paging Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paging Added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="418" key="#Firefox_Settings" timestamp="1605211898738">
@@ -355,22 +362,22 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="634" y="222" key="Github.UntrackedFilesDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1604998889638" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1605498324654">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1605503940274">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605498324654" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1605498324654">
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1605503940274" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1605503940274">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605498324654" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1605498324654">
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1605503940274" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1605503940274">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605498324654" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1605498324654">
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1605503940274" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1605503940274">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605498324654" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1605503940274" />
     <state width="1877" height="372" key="GridCell.Tab.1.bottom" timestamp="1605172096097">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
@@ -463,10 +470,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1605494174436" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605492409621">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605501688833">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605492409621" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605501688833" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605469927245">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>

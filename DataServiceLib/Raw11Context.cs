@@ -23,11 +23,7 @@ namespace DataServiceLib
         public DbSet<SearchHistory> SearchHistory { get; set; }
         public DbSet<TitleAkas> TitleAkas { get; set; }
         public virtual DbSet<TitleBasics> TitleBasics { get; set; }
-
         public virtual DbSet<TitleBasicsDto> TitleBasicsDTO { get; set; }
-
-        //  public virtual DbSet<SearchResults> SearchResults { get; set; }
-
         public DbSet<TitlePrincipals> TitlePrincipals { get; set; }
         public DbSet<TitleNameRate> TitleNameRates { get; set; }
         public DbSet<Users> Users { get; set; }
