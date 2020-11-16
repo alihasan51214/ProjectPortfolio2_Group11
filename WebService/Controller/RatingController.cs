@@ -60,8 +60,7 @@ namespace ProjectPortfolio2_Group11.Controller
                 string badrequest = "User has already rated this title";
                 return BadRequest(badrequest);
             }
-            _dataServiceFacade.RatingDs.CreateRating(userTitleRate);
-            return Ok(_dataServiceFacade.RatingDs.CreateRating(userTitleRate).ToList());
+            return Ok(_dataServiceFacade.RatingDs.CreateRating(userTitleRate));
         }
 
         [HttpDelete("{userId}/{tConst}")]

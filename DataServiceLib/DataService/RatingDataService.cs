@@ -31,11 +31,11 @@ namespace DataServiceLib.DataService
         public bool CheckRating(UserTitleRate userTitleRate)
         {
             var dbUserTitleRate = GetRating(userTitleRate.UserId, userTitleRate.TConst);
-            if (dbUserTitleRate == userTitleRate)
+            if (dbUserTitleRate == null)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
         
         public IList<TitleRateDto> CreateRating(UserTitleRate userTitleRate)
