@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mDsh4vJOVJ5J6rlL531WhqUdCTD5KZktVR23e82rx2lT2Cj3n8Ff+dxrNoa424sFBevVHQ1+C9PBUz7XACnc6w==",
+  "dgSpecHash": "GwsdgsVKD5Hog1BkQd0NhjwCOO6HASgdilBJG0v29D76mrLmkWgBCPIWAaWXZAvFiSGKh9t4Z4pmgmOiOukm+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
+  "projectFilePath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bob-w\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\bob-w\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
