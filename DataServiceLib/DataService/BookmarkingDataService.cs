@@ -28,13 +28,14 @@ namespace DataServiceLib.DataService
         public bool CreateBookmark(BookmarkPerson bookmarkPerson)
         {
             var dbBook = GetBookMark(bookmarkPerson.UserId, bookmarkPerson.NConst);
-            if (dbBook == bookmarkPerson)
+            if (dbBook == null)
             {
-                return false;
+                _db.Add(bookmarkPerson);
+                _db.SaveChanges();
+                return true;
             }
-            _db.Add(bookmarkPerson);
-            _db.SaveChanges();
-            return true;
+             
+            return false;
         }
         
         public bool DeleteBookmark(int userId, string nConst)
