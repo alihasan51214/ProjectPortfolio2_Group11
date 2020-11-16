@@ -2,8 +2,6 @@
 {
     public class BasicsDto
     {
-
         public string PrimaryTitle { get; set; }
-    
     }
 }
