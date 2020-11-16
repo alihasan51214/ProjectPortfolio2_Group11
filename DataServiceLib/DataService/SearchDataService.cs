@@ -18,7 +18,7 @@ namespace DataServiceLib.DataService
             _db = new Raw11Context(connStr);
         }
 
-        public IList<SearchHistory> GetSearchHistory(int userId)
+        public IList<SearchHistory> GetSearchHistory(int UserId, int userId)
         {
             return _db.SearchHistory.Where(x => x.UserId == userId).ToList();
         }

@@ -1,7 +1,9 @@
 ﻿using System;
 using AutoMapper;
 using DataServiceLib;
+using DataServiceLib.DBObjects;
 using Microsoft.AspNetCore.Mvc;
+using ProjectPortfolio2_Group11.Authentication.Attributes;
 using ProjectPortfolio2_Group11.Model;
 
 namespace ProjectPortfolio2_Group11.Controller
@@ -20,15 +22,24 @@ namespace ProjectPortfolio2_Group11.Controller
             _mapper = mapper;
         }
         
+        [Authorization]
         [HttpGet("{userId}")]
         public IActionResult GetSearchHistory(int userId)
-        {
-            var search = _dataServiceFacade.SearchDs.GetSearchHistory(userId);
-            if (search == null)
+        { 
+            try
             {
-                return NotFound();
+                var user = Request.HttpContext.Items["User"] as UsersForAuth;
+                var search = _dataServiceFacade.SearchDs.GetSearchHistory(user.UserId, userId);
+                if (search == null)
+                {
+                    return NotFound();
+                }
+                return Ok(search);
             }
-            return Ok(search);
+            catch (Exception)
+            {
+                return Unauthorized();
+            }
         }
 
         [HttpPost("{userId}", Name = nameof(AddToSearchHistory))]

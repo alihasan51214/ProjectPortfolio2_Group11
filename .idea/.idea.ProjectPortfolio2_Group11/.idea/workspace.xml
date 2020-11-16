@@ -26,7 +26,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Test Added" />
+    <list default="true" id="b337c1ac-24da-4312-b1f1-84a2b4850457" name="Default Changelist" comment="Working Project">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPortfolio2_Group11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/Controller/SearchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebService/appsettings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,16 +77,12 @@
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/BookmarkPersonProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/TitleBasicsProfile.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/BasicsDto.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
-        <option value="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" />
-        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/RatingTable.cs" />
         <option value="$PROJECT_DIR$/DataServiceLib/DBObjects/TitleRateDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/MappingProfile/UserTitleRateProfile.cs" />
         <option value="$PROJECT_DIR$/Authentication/Controllers/MoviesController.cs" />
         <option value="$PROJECT_DIR$/Authentication/Controllers/RatingController.cs" />
         <option value="$PROJECT_DIR$/WebService/Services/PasswordService.cs" />
-        <option value="$PROJECT_DIR$/WebService/appsettings.json" />
         <option value="$PROJECT_DIR$/WebService/Startup.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/RegisterDto.cs" />
         <option value="$PROJECT_DIR$/WebService/Model/LoginDto.cs" />
@@ -106,6 +108,10 @@
         <option value="$PROJECT_DIR$/WebService/Controller/RatingController.cs" />
         <option value="$PROJECT_DIR$/WebService/Controller/BookmarkController.cs" />
         <option value="$PROJECT_DIR$/WebServiceTests/BookmarkControllerTest.cs" />
+        <option value="$PROJECT_DIR$/WebService/appsettings.json" />
+        <option value="$PROJECT_DIR$/WebService/Controller/SearchController.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/IDataService/ISearchDataService.cs" />
+        <option value="$PROJECT_DIR$/DataServiceLib/DataService/SearchDataService.cs" />
       </list>
     </option>
   </component>
@@ -251,6 +257,8 @@
       <workItem from="1605522831560" duration="7908000" />
       <workItem from="1605537947638" duration="12368000" />
       <workItem from="1605550691142" duration="4476000" />
+      <workItem from="1605556253863" duration="236000" />
+      <workItem from="1605557190054" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="Controllers Added">
       <created>1605013594208</created>
@@ -413,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605555290380</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Working Project">
+      <created>1605556381649</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1605556381649</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +480,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="authorization attribute added to the methods" />
     <MESSAGE value="Test Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Added" />
+    <MESSAGE value="Working Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="418" key="#Firefox_Settings" timestamp="1605211898738">
@@ -604,10 +620,10 @@
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
     <state x="92" y="92" width="1736" height="850" key="VCS.FileHistoryDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1605539233190" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605555295082">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605556385410">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605555295082" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1605556385410" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605551894492">
       <screen x="0" y="0" width="1920" height="1034" />
     </state>
