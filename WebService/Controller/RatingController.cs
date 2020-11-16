@@ -24,7 +24,8 @@ namespace ProjectPortfolio2_Group11.Controller
         [HttpGet]
         public IActionResult GetRatingList()
         {
-            var userTitleRates = _dataServiceFacade.RatingDs.GetRatingList();
+            var user = Request.HttpContext.Items["User"] as UsersForAuth;
+            var userTitleRates = _dataServiceFacade.RatingDs.GetRatingList(user.UserId);
             return Ok(_mapper.Map<IEnumerable<UserTitleRateDto>>(userTitleRates));
         }
 
