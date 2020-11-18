@@ -35,12 +35,12 @@ namespace ProjectPortfolio2_Group11.Controller
             var user = _dataServiceFacade.UsersDs.GetUser(userId);
             if (user == null)
             {
-                return NotFound();
+                return NotFound("user not found");
             }
             return Ok(_mapper.Map<UsersDto>(user));
         }
         
-        [HttpPost("post")]
+        [HttpPost("new")]
         public IActionResult CreateUsers(UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
@@ -52,11 +52,11 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult UpdateUser(int userId, UsersForCreationDto usersForCreationDto)
         {
             var user = _mapper.Map<Users>(usersForCreationDto);
-            if (_dataServiceFacade.UsersDs.UpdateUser(userId, user))
+            if (!_dataServiceFacade.UsersDs.UpdateUser(userId, user))
             {
-                return NotFound();
+                return NotFound("user not found");
             }
-            return NoContent();
+            return Ok(user);
         }
 
         [HttpDelete("{userId}")]
@@ -78,7 +78,7 @@ namespace ProjectPortfolio2_Group11.Controller
         {
             if (_dataServiceFacade.UsersDs.AuthenticationGetUser(registerDto.Username) != null)
             {
-                return BadRequest();
+                return BadRequest("User already exists");
             }
 
             int.TryParse(_configuration.GetSection("Auth:PasswordSize").Value, out int pwdSize);
@@ -102,7 +102,7 @@ namespace ProjectPortfolio2_Group11.Controller
             var user = _dataServiceFacade.UsersDs.AuthenticationGetUser(dto.Username);
             if (user == null)
             {
-                return BadRequest();
+                return BadRequest("user not found");
             }
 
             int.TryParse(_configuration.GetSection("Auth:PasswordSize").Value, out int pwdSize);
@@ -122,7 +122,7 @@ namespace ProjectPortfolio2_Group11.Controller
 
             if (password != user.Password)
             {
-                return BadRequest();
+                return BadRequest("wrong password");
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();

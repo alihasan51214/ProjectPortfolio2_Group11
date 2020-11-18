@@ -30,10 +30,15 @@ namespace DataServiceLib.DataService
        
         public IList<TitleRateDto> CreateRating(UserTitleRate userTitleRate)
         {
+          
             var queery = _db.RatingTable.FromSqlInterpolated($"select * from rate({userTitleRate.UserId},{userTitleRate.TConst},{userTitleRate.TitleIndividRating})");
+          
             _db.SaveChanges();
+            
             return queery
                 .ToList();
+         
+
         }
 
         
