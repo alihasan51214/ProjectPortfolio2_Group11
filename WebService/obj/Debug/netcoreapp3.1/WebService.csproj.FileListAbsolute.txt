@@ -96,3 +96,11 @@ D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfoli
 D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\RUC\Kandidat\1 Semester\Project portfolio\Project portfolio 2\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\bob-w\source\repos\ProjectPortfolio2_Group11\WebService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

@@ -161,14 +161,14 @@ namespace DataServiceLib
             modelBuilder.Entity<Writer>().Property(x => x.Writers).HasColumnName("writers");
             modelBuilder.Entity<Writer>().HasKey(x => new {x.Writers, x.TConst});
             
-            //TitleRateDto
-            modelBuilder.Entity<TitleRateDto>().Property(x => x.Tconst).HasColumnName("tconst");
+            //TitleRateDto used for the rate() function, for rating titles
+            modelBuilder.Entity<TitleRateDto>().Property(x => x.Tconst).HasColumnName("tconst_");
             modelBuilder.Entity<TitleRateDto>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
             modelBuilder.Entity<TitleRateDto>().Property(x => x.NumVotes).HasColumnName("numvotes");
-            modelBuilder.Entity<TitleRateDto>().Property(x => x.AvarageRating).HasColumnName("averagerating");
+            modelBuilder.Entity<TitleRateDto>().Property(x => x.MyRating).HasColumnName("myrating");
             modelBuilder.Entity<TitleRateDto>().HasNoKey();
                     
-            //TitleBasicsDto
+            //TitleBasicsDto used for the String_Search() function
             modelBuilder.Entity<TitleBasicsDto>().Property(x => x.PrimaryTitle).HasColumnName("primarytitle");
             modelBuilder.Entity<TitleBasicsDto>().HasNoKey();
         }

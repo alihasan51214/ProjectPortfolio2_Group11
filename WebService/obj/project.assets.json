@@ -4409,19 +4409,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aliha\\.nuget\\packages\\": {}
+    "C:\\Users\\bob-w\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RUC\\Kandidat\\1 Semester\\Project portfolio\\Project portfolio 2\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
+      "projectUniqueName": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "D:\\RUC\\Kandidat\\1 Semester\\Project portfolio\\Project portfolio 2\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
-      "packagesPath": "C:\\Users\\aliha\\.nuget\\packages\\",
-      "outputPath": "D:\\RUC\\Kandidat\\1 Semester\\Project portfolio\\Project portfolio 2\\ProjectPortfolio2_Group11\\WebService\\obj\\",
+      "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj",
+      "packagesPath": "C:\\Users\\bob-w\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aliha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bob-w\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4434,8 +4434,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\RUC\\Kandidat\\1 Semester\\Project portfolio\\Project portfolio 2\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "D:\\RUC\\Kandidat\\1 Semester\\Project portfolio\\Project portfolio 2\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
+            "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
+              "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
             }
           }
         }
@@ -4476,7 +4476,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

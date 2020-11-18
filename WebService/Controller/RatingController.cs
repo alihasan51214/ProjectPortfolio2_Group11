@@ -55,24 +55,10 @@ namespace ProjectPortfolio2_Group11.Controller
         public IActionResult CreateRating(UserTitleRateForCreationDto userTitleRateForCreationDto)
         {
             var userTitleRate = _mapper.Map<UserTitleRate>(userTitleRateForCreationDto);
-            if (!_dataServiceFacade.RatingDs.CheckRating(userTitleRate))
-            { 
-                string badrequest = "User has already rated this title";
-                return BadRequest(badrequest);
-            }
+           
             return Ok(_dataServiceFacade.RatingDs.CreateRating(userTitleRate));
         }
 
-        [HttpDelete("{userId}/{tConst}")]
-        public IActionResult DeleteRating(int userId, string tConst)
-        {
-            var response = " rating not found";
-            if (!_dataServiceFacade.RatingDs.DeleteRating(userId, tConst))
-            {
-                return NotFound(response);
-            }
-            response = " rating deleted succesfully";
-            return CreatedAtRoute(null, userId + response);
-        }
+     
     }
 }

@@ -8,8 +8,7 @@ namespace DataServiceLib.IDataService
     {
         IList<UserTitleRate> GetRatingList(int UserId);
         UserTitleRate GetRating(int userId, string tConst);
-        public bool CheckRating(UserTitleRate userTitleRate);
         IList<TitleRateDto> CreateRating(UserTitleRate userTitleRate);
-        bool DeleteRating(int userId, string tConst);
+         
     }
 }
