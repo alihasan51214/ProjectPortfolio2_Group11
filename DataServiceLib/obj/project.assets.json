@@ -757,6 +757,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.EntityFrameworkCore >= 3.1.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 3.1.4"
     ]
   },
@@ -766,11 +767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
+      "projectUniqueName": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
       "projectName": "DataServiceLib",
-      "projectPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
+      "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj",
       "packagesPath": "C:\\Users\\bob-w\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\DataServiceLib\\obj\\",
+      "outputPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bob-w\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -797,6 +798,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.4, )"
+          },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[3.1.4, )"

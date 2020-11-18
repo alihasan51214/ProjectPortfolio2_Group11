@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
+using DataServiceLib;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjectPortfolio2_Group11.Authentication.Middleware;
 
 namespace ProjectPortfolio2_Group11
 {
@@ -17,6 +16,9 @@ namespace ProjectPortfolio2_Group11
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<DataServiceFacade>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,6 +29,7 @@ namespace ProjectPortfolio2_Group11
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseJwtAuth();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

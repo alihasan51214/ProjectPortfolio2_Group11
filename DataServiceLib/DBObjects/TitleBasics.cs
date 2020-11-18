@@ -1,13 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataServiceLib.DBObjects
 {
     public class TitleBasics
     {
-    
-        public string Tconst { get; set; }
-        public string TitleType { get; set; }
+
+        //  [NotMapped]
         public string PrimaryTitle { get; set; }
+        public string TConst { get; set; }
+        public string TitleType { get; set; }
         public string OriginalTitle { get; set; }
         public bool IsAdult { get; set; }
         public int StartYear { get; set; }
@@ -17,11 +19,6 @@ namespace DataServiceLib.DBObjects
         public string Awards { get; set; }
         public string Plot { get; set; }
         public int AvarageRating { get; set; }
-        public int NumVotes { get; set; }
-        
-        public override string ToString()
-        {
-            return $"Tconst = {Tconst}, TitleType = {TitleType}, PrimaryTitle ={ PrimaryTitle}, OriginalTitle = {OriginalTitle}, IsAdult = {IsAdult},StartYear = {StartYear}, EndYear = {EndYear}, RunTimeMinutes = {RunTimeMinutes}, Poster ={ Poster}, Awards ={ Awards}, Plot ={ Plot}, AvarageRating ={ AvarageRating}, NumVotes ={ NumVotes} ";
-        }
+        public int NumVotes { get; set; } 
     }
 }
