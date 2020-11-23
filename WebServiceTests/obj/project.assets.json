@@ -7421,11 +7421,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebServiceTests\\WebServiceTests.csproj",
+      "projectUniqueName": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebServiceTests\\WebServiceTests.csproj",
       "projectName": "WebServiceTests",
-      "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebServiceTests\\WebServiceTests.csproj",
+      "projectPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebServiceTests\\WebServiceTests.csproj",
       "packagesPath": "C:\\Users\\bob-w\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebServiceTests\\obj\\",
+      "outputPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebServiceTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bob-w\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7441,11 +7441,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
-              "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
+            "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj": {
+              "projectPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\DataServiceLib\\DataServiceLib.csproj"
             },
-            "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {
-              "projectPath": "C:\\Users\\bob-w\\source\\repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj"
+            "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj": {
+              "projectPath": "C:\\Users\\bob-w\\Source\\Repos\\ProjectPortfolio2_Group11\\WebService\\WebService.csproj"
             }
           }
         }

@@ -26,7 +26,7 @@ namespace DataServiceLib
         public virtual DbSet<TitleBasics> TitleBasics { get; set; }
         public virtual DbSet<TitleBasicsDto> TitleBasicsDTO { get; set; }
         public DbSet<TitlePrincipals> TitlePrincipals { get; set; }
-        public DbSet<TitleNameRate> TitleNameRates { get; set; }
+    
         public DbSet<Users> Users { get; set; }
         public DbSet<UserTitleRate> UserTitleRates { get; set; }
         public DbSet<WordSearch> WordSearch { get; set; }
@@ -125,14 +125,8 @@ namespace DataServiceLib
             modelBuilder.Entity<TitlePrincipals>().Property(x => x.Category).HasColumnName("category");
             modelBuilder.Entity<TitlePrincipals>().Property(x => x.Job).HasColumnName("job");
             modelBuilder.Entity<TitlePrincipals>().Property(x => x.Characters).HasColumnName("characters");
+            modelBuilder.Entity<TitlePrincipals>().Property(x => x.NameRating).HasColumnName("namerating");
             modelBuilder.Entity<TitlePrincipals>().HasKey(x => new {x.TConst, x.Ordering });
-
-            modelBuilder.Entity<TitleNameRate>().ToTable("user_namerate");
-            modelBuilder.Entity<TitleNameRate>().Property(x => x.UserId).HasColumnName("userid");
-            modelBuilder.Entity<TitleNameRate>().Property(x => x.NameIndividRating).HasColumnName("name_individrating");
-            modelBuilder.Entity<TitleNameRate>().Property(x => x.NConst).HasColumnName("nconst");
-            modelBuilder.Entity<TitleNameRate>().Property(x => x.DateTime).HasColumnName("username_date");
-            modelBuilder.Entity<TitleNameRate>().HasKey(x => new { x.UserId, x.NConst});
 
             modelBuilder.Entity<Users>().ToTable("users");
             modelBuilder.Entity<Users>().Property(x => x.UserId).HasColumnName("userid");

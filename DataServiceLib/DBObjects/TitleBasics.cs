@@ -18,7 +18,7 @@ namespace DataServiceLib.DBObjects
         public string Poster { get; set; }
         public string Awards { get; set; }
         public string Plot { get; set; }
-        public int AvarageRating { get; set; }
+        public decimal AvarageRating { get; set; }
         public int NumVotes { get; set; } 
     }
 }
